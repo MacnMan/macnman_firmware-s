@@ -1,0 +1,11 @@
+{
+    "Bme280": {
+        "application": "TempPressureHumi",
+        "devicetype": "node",
+        "protocol": "LoRaWAN",
+        "sensorName": "BME280",
+        "type": "I2C",
+        "binpath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.bin",
+        "photopath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.png"
+    }
+}
