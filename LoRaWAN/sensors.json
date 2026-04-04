@@ -16,5 +16,14 @@
         "type": "I2C",
         "binpath": "LoRaWAN/controllers/macset-lbo/rs485analogController.bin",
         "photopath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.png"
+    },
+    "MacSyncLBO-SHT40": {
+        "application": "V1.03.04",
+        "devicetype": "node",
+        "protocol": "LoRaWAN",
+        "sensorName": "SHT40",
+        "type": "I2C",
+        "binpath": "LoRaWAN/sensors/temperatureandhumidity/macsyn/Sht40.bin",
+        "photopath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.png"
     }
 }
