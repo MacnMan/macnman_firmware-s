@@ -1,6 +1,6 @@
 {
     "MacSyncLBO-BME280": {
-        "application": "TempPressureHumi",
+        "application": "Temperature Humity  and Pressure Sensor for LoRaWAN",
         "devicetype": "node",
         "protocol": "LoRaWAN",
         "sensorName": "BME280",
