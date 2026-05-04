@@ -27,7 +27,7 @@
         "photopath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.png"
     },
     "MacSync-LPS28": {
-        "application": "V1.00.01",
+        "application": "V1.0.1",
         "devicetype": "node",
         "protocol": "LoRaWAN",
         "sensorName": "MacSync-LPS28",
