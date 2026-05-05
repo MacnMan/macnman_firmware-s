@@ -32,7 +32,7 @@
         "protocol": "LoRaWAN",
         "sensorName": "MacSync-LPS28",
         "type": "I2C",
-        "binpath": "LoRaWAN/sensors/MacSync-LPS28/MacSync-LPS28.bin",
+        "binpath": "LoRaWAN/sensors/MacSync-LPS28/LPS28_LevelSensor.bin",
         "photopath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.png"
     }
 }
