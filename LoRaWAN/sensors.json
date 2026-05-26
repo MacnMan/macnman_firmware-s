@@ -51,7 +51,7 @@
         "sensorName": "MacSync-LX1-PO",
         "type": "RS485",
         "binpath": "LoRaWAN/dataloggers/MacSync-LX1-PO/MacSync-LX1-PO.bin",
-        "photopath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.png"
+        "photopath": "LoRaWAN/dataloggers/MacSync-LX1-PO/MacSync-LX1-PO.png"
     }
 }
 
