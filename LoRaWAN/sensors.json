@@ -9,7 +9,7 @@
         "photopath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.png"
     },
     "MacSet-LPO": {
-        "application": "LoRaWAN Controller",
+        "application": "LoRaWAN",
         "devicetype": "node",
         "protocol": "LoRaWAN",
         "sensorName": "MacSet-LPO",
@@ -50,7 +50,7 @@
         "protocol": "LoRaWAN",
         "sensorName": "MacSync-LX1-PO",
         "type": "RS485",
-        "binpath": "LoRaWAN/dataloggers/MacSync-LX1-PO",
+        "binpath": "LoRaWAN/dataloggers/MacSync-LX1-PO/MacSync-LX1-PO.bin",
         "photopath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.png"
     }
 }
