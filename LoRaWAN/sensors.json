@@ -33,7 +33,7 @@
         "sensorName": "MacSync-LPS28",
         "type": "I2C",
         "binpath": "LoRaWAN/sensors/MacSync-LPS28/MacSync-LPS28_V1.0.1.bin",
-        "photopath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.png"
+        "photopath": "LoRaWAN/sensors/MacSync-LPS28/MacSync-LPS28.png"
     },
     "MacSync-L-Odor-X1": {
         "application": "V1.0.1",
