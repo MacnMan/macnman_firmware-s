@@ -44,14 +44,13 @@
         "binpath": "LoRaWAN/sensors/MacSync-L-Odor-X1/MacSync-L-Odor-X1.bin",
         "photopath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.png"
     },
-    
     "MacSync-LX1-PO": {
         "application": "V2.0.1",
         "devicetype": "node",
         "protocol": "LoRaWAN",
         "sensorName": "MacSync-LX1-PO",
         "type": "RS485",
-        "binpath": "LoRaWAN/sensors/MacSync-L-Odor-X1/MacSync-L-Odor-X1.bin",
+        "binpath": "LoRaWAN/dataloggers/MacSync-LX1-PO",
         "photopath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.png"
     }
 }
