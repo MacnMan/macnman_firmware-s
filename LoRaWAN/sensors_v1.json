@@ -1,17 +1,4 @@
 {
-  "MacSyncLBO-BME280": {
-    "devicetype": "node",
-    "protocol": "LoRaWAN",
-    "sensorName": "BME280",
-    "type": "I2C",
-    "versions": [
-      {
-        "application": "Temperature Humity and Pressure Sensor for LoRaWAN",
-        "binpath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.bin",
-        "photopath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.png"
-      }
-    ]
-  },
   "MacSet-LPO": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
@@ -21,7 +8,7 @@
       {
         "application": "LoRaWAN",
         "binpath": "LoRaWAN/controllers/MacSet-LPO/MacSet-LPO-V1.0.1.bin",
-        "photopath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.png"
+        "photopath": "LoRaWAN/sensors/MacSync-LPS28/MacSync-LPS28.png"
       }
     ]
   },
@@ -60,7 +47,7 @@
       {
         "application": "V1.0.1",
         "binpath": "LoRaWAN/sensors/MacSync-L-Odor-X1/MacSync-L-Odor-X1.bin",
-        "photopath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.png"
+        "photopath": "LoRaWAN/sensors/MacSync-LPS28/MacSync-LPS28.png"
       }
     ]
   },
@@ -73,7 +60,7 @@
       {
         "application": "V1.0.2",
         "binpath": "LoRaWAN/sensors/MacSync-L-Odor-X1/MacSync-L-Odor-X2.bin",
-        "photopath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.png"
+        "photopath": "LoRaWAN/sensors/MacSync-LPS28/MacSync-LPS28.png"
       }
     ]
   },
