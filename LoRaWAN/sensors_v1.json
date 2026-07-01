@@ -35,11 +35,6 @@
         "application": "V1.03.04",
         "binpath": "LoRaWAN/sensors/temperatureandhumidity/macsyn/Sht40.bin",
         "photopath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.png"
-      },
-      {
-        "application": "V1.0.1",
-        "binpath": "LoRaWAN/LoRa/MacTalk_LT1/MacTalk_LT1.bin",
-        "photopath": "LoRaWAN/dataloggers/MacSync-LX1-PO/MacSync-LX1-PO.png"
       }
     ]
   },
@@ -91,11 +86,6 @@
       {
         "application": "V2.0.1",
         "binpath": "LoRaWAN/dataloggers/MacSync-LX1-PO/MacSync-LX1-PO.bin",
-        "photopath": "LoRaWAN/dataloggers/MacSync-LX1-PO/MacSync-LX1-PO.png"
-      },
-      {
-        "application": "V1.0.1",
-        "binpath": "LoRaWAN/LoRa/MacTalk_LT1/MacTalk_LT1.bin",
         "photopath": "LoRaWAN/dataloggers/MacSync-LX1-PO/MacSync-LX1-PO.png"
       }
     ]
