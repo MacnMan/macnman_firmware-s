@@ -25,7 +25,7 @@
       }
     ]
   },
-  "MacSyncLBO-SHT40": {
+  "MacSync_LTS_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
     "sensorName": "SHT40",
@@ -33,8 +33,8 @@
     "versions": [
       {
         "application": "V1.03.04",
-        "binpath": "LoRaWAN/sensors/temperatureandhumidity/macsyn/Sht40.bin",
-        "photopath": "LoRaWAN/sensors/temperatureandhumidity/Bme280.png"
+        "binpath": "LoRaWAN/sensors/MacSync_LTS_X1/MacSync_LTS_X1.bin",
+        "photopath": "LoRaWAN/sensors/MacSync_LTS_X1/MacSync_LTS_X1.png"
       }
     ]
   },
