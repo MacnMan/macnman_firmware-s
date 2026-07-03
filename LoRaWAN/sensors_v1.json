@@ -12,16 +12,16 @@
       }
     ]
   },
-  "MacSync_LTS_X1": {
+  "MacSync_LTH_BS_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
     "sensorName": "SHT40",
     "type": "I2C",
     "versions": [
       {
-        "application": "V1.03.04",
-        "binpath": "LoRaWAN/sensors/MacSync_LTS_X1/MacSync_LTS_X1.bin",
-        "photopath": "LoRaWAN/sensors/MacSync_LTS_X1/MacSync_LTS_X1.png"
+        "application": "V1.0.0",
+        "binpath": "LoRaWAN/sensors/MacSync_LTH_BS_X1/MacSync_LTH_BS_X1.bin",
+        "photopath": "LoRaWAN/sensors/MacSync_LTH_BS_X1/MacSync_LTH_BS_X1.png"
       }
     ]
   },

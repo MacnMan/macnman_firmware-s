@@ -8,14 +8,14 @@
         "binpath": "LoRaWAN/controllers/MacSet-LPO/MacSet-LPO-V1.0.1.bin",
         "photopath": "LoRaWAN/sensors/MacSync-LPS28/MacSync-LPS28.png"
     },
-    "MacSync_LTS_X1": {
-        "application": "V1.03.04",
+    "MacSync_LTH_BS_X1": {
+        "application": "V1.0.0",
         "devicetype": "node",
         "protocol": "LoRaWAN",
         "sensorName": "SHT40",
         "type": "I2C",
-        "binpath": "LoRaWAN/sensors/MacSync_LTS_X1/MacSync_LTS_X1.bin",
-        "photopath": "LoRaWAN/sensors/MacSync_LTS_X1/MacSync_LTS_X1.png"
+        "binpath": "LoRaWAN/sensors/MacSync_LTH_BS_X1/MacSync_LTH_BS_X1.bin",
+        "photopath": "LoRaWAN/sensors/MacSync_LTH_BS_X1/MacSync_LTH_BS_X1.png"
     },
     "MacSync-LPS28": {
         "application": "V2.1.1",
