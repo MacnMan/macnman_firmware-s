@@ -2,7 +2,7 @@
   "MacSync_LBS_TH": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MacSync_LBS_TH",
+    "sensorName": "MacSync-LBS-TH",
     "type": "I2C",
     "versions": [
       {
