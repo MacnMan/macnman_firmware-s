@@ -7,8 +7,8 @@
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "LoRaWAN/sensors/MacSync_LBS_TH/MacSync_LBS_TH_X1.bin",
-        "photopath": "LoRaWAN/sensors/MacSync_LBS_TH/MacSync_LBS_TH_X1.png"
+        "binpath": "LoRaWAN/sensors/MacSync-LBS-TH/MacSync_LBS_TH_X1.bin",
+        "photopath": "LoRaWAN/sensors/MacSync-LBS-TH/MacSync_LBS_TH_X1.png"
       }
     ]
   },
@@ -20,8 +20,8 @@
     "versions": [
       {
         "application": "V1.0.1",
-        "binpath": "LoRaWAN/sensors/MacSync_LBS_NS/MacSync_LBS_NS_X1.bin",
-        "photopath": "LoRaWAN/sensors/MacSync_LBS_NS/MacSync_LBS_NS_X1.png"
+        "binpath": "LoRaWAN/sensors/MacSync-LBS-NS/MacSync_LBS_NS_X1.bin",
+        "photopath": "LoRaWAN/sensors/MacSync-LBS-NS/MacSync_LBS_NS_X1.png"
       }
     ]
   }
