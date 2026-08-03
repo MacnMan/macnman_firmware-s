@@ -22,6 +22,11 @@
         "application": "V1.0.1",
         "binpath": "LoRaWAN/sensors/MacSync_LBS_NS/MacSync_LBS_NS_X1.bin",
         "photopath": "LoRaWAN/sensors/MacSync_LBS_NS/MacSync_LBS_NS.png"
+      },
+      {
+        "application": "V1.0.2",
+        "binpath": "LoRaWAN/sensors/MacSync_LBS_NS/MacSync_LBS_NS_X1.bin",
+        "photopath": "LoRaWAN/sensors/MacSync_LBS_NS/MacSync_LBS_NS.png"
       }
     ]
   }
