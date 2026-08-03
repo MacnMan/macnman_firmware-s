@@ -38,6 +38,19 @@
       }
     ]
   },
+  "MacSync-LBS-NS-X1": {
+    "devicetype": "node",
+    "protocol": "LoRaWAN",
+    "sensorName": "MacSync-LBS-NS-X1",
+    "type": "RS485",
+    "versions": [
+      {
+        "application": "V1.0.1",
+        "binpath": "LoRaWAN/sensors/MacSync_LBS_NS/MacSync_LBS_NS_X1.bin",
+        "photopath": "LoRaWAN/sensors/MacSync_LBS_NS/MacSync_LBS_NS_X1.png"
+      }
+    ]
+  },
   "MacSync-L-Odor-X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
@@ -51,7 +64,7 @@
       }
     ]
   },
-  "MacSync-L-Odor-X2": {
+  "MacSync-L-Odor-X2": { 
     "devicetype": "node",
     "protocol": "LoRaWAN",
     "sensorName": "MacSync-L-Odor-X2",
