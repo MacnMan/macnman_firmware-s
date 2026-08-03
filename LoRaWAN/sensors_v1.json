@@ -2,7 +2,7 @@
   "MacSync_LBS_TH": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "SHT40",
+    "sensorName": "MacSync_LBS_TH",
     "type": "I2C",
     "versions": [
       {
@@ -15,7 +15,7 @@
   "MacSync-LBS-NS": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "Noise Sensor",
+    "sensorName": "MacSync-LBS-NS",
     "type": "RS485",
     "versions": [
       {
