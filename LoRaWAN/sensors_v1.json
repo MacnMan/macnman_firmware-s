@@ -33,8 +33,8 @@
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "LoRaWAN/sensors/MacSync-LPS-ToF/MacSync_LPS_ToF_X1.bin",
-        "photopath": "LoRaWAN/sensors/MacSync-LPS-ToF/MacSync_LPS_ToF_X1.png"
+        "binpath": "LoRaWAN/sensors/MacSync-LPS-ToF/MacSync-LPS-ToF-X1.bin",
+        "photopath": "LoRaWAN/sensors/MacSync-LPS-ToF/MacSync-LPS-ToF-X1.png"
       }
     ]
   }
