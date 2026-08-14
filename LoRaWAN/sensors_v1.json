@@ -63,5 +63,18 @@
         "photopath": "LoRaWAN/dataloggers/MacSync-LBD-STD/MacSync-LBD-STD-X1.png"
       }
     ]
+  },
+  "MacTalk_Door_Sensor_X1": {
+    "devicetype": "node",
+    "protocol": "LoRa",
+    "sensorName": "MacTalk_Door_Sensor_X1",
+    "type": "Digital",
+    "versions": [
+      {
+        "application": "V1.0.0",
+        "binpath": "LoRaWAN/LoRa/MacTalk_Door_Sensor_X1/Datoms_Door_Sensor_WLE5.bin",
+        "photopath": "LoRaWAN/LoRa/MacTalk_Door_Sensor_X1/Datoms_Door_Sensor_WLE5.png"
+      }
+    ]
   }
 }
