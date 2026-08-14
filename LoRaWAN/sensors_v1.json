@@ -50,5 +50,18 @@
         "photopath": "LoRaWAN/sensors/MacSync-LBS-ToF/MacSync-LBS-ToF-X1.png"
       }
     ]
+  },
+  "MacSync_LBD_STD_X1": {
+    "devicetype": "datalogger",
+    "protocol": "LoRaWAN",
+    "sensorName": "MacSync_LBD_STD_X1",
+    "type": "RS485",
+    "versions": [
+      {
+        "application": "V1.0.0",
+        "binpath": "LoRaWAN/dataloggers/MacSync-LBD-STD/MacSync-LBD-STD-X1.bin",
+        "photopath": "LoRaWAN/dataloggers/MacSync-LBD-STD/MacSync-LBD-STD-X1.png"
+      }
+    ]
   }
 }
