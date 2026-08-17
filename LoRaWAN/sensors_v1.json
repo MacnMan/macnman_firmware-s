@@ -64,16 +64,16 @@
       }
     ]
   },
-  "MacTalk_LBS_DRS_X1": {
+  "MacSync_MBS_DRS_X1": {
     "devicetype": "node",
     "protocol": "LoRa",
-    "sensorName": "MacTalk_LBS_DRS_X1",
+    "sensorName": "MacSync_MBS_DRS_X1",
     "type": "Digital",
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "LoRaWAN/LoRa/MacTalk_LBS_DRS/MacTalk_LBS_DRS_X1.bin",
-        "photopath": "LoRaWAN/LoRa/MacTalk_LBS_DRS/MacTalk_LBS_DRS_X1.png"
+        "binpath": "LoRaWAN/LoRa/MacSync_MBS_DRS/MacSync_MBS_DRS_X1.bin",
+        "photopath": "LoRaWAN/LoRa/MacSync_MBS_DRS/MacSync_MBS_DRS_X1.png"
       }
     ]
   }

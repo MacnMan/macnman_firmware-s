@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell($d = Get-Content 'LoRaWAN\\\\sensors_v1.json' -Raw | ConvertFrom-Json; foreach \\($p in $d.PSObject.Properties\\) { foreach \\($v in $p.Value.versions\\) { \"{0,-22} {1,-8} {2,-8} bin={3} png={4}\" -f $p.Name, $p.Value.protocol, $p.Value.type, \\(Test-Path $v.binpath\\), \\(Test-Path $v.photopath\\) } })"
+      "PowerShell($d = Get-Content 'LoRaWAN\\\\sensors_v1.json' -Raw | ConvertFrom-Json; foreach \\($p in $d.PSObject.Properties\\) { foreach \\($v in $p.Value.versions\\) { \"{0,-22} {1,-8} {2,-8} bin={3} png={4}\" -f $p.Name, $p.Value.protocol, $p.Value.type, \\(Test-Path $v.binpath\\), \\(Test-Path $v.photopath\\) } })",
+      "Bash(python -c ' *)",
+      "PowerShell($m = Get-Content 'LoRaWAN/sensors_v1.json' -Raw | ConvertFrom-Json; foreach \\($p in $m.PSObject.Properties\\) { foreach \\($v in $p.Value.versions\\) { foreach \\($f in @\\($v.binpath, $v.photopath\\)\\) { if \\(Test-Path $f\\) { \"OK       $f\" } else { \"MISSING  $f\" } } } })"
     ]
   }
 }
