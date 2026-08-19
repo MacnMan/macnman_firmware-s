@@ -35,18 +35,10 @@
         "application": "V1.0.0",
         "binpath": "LoRaWAN/sensors/MacSync-LPS-ToF/MacSync-LPS-ToF-X1.bin",
         "photopath": "LoRaWAN/sensors/MacSync-LPS-ToF/MacSync-LPS-ToF-X1.png"
-      }
-    ]
-  },
-  "MacSync_LPS_ToF_X1_AMZ": {
-    "devicetype": "node",
-    "protocol": "LoRaWAN",
-    "sensorName": "MacSync_LPS_ToF_X1_AMZ",
-    "type": "I2C",
-    "versions": [
+      },
       {
-        "application": "V1.0.0-AMZ",
-        "binpath": "LoRaWAN/sensors/MacSync-LPS-ToF/custom/MacSync-LPS-ToF-X1-AMZ.bin",
+        "application": "V1.0.1",
+        "binpath": "LoRaWAN/sensors/MacSync-LPS-ToF/custom/MacSync-LPS-ToF-X1-V1.0.1.bin",
         "photopath": "LoRaWAN/sensors/MacSync-LPS-ToF/MacSync-LPS-ToF-X1.png"
       }
     ]

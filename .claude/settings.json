@@ -7,7 +7,12 @@
       "Bash(mkdir -p custom)",
       "Bash(mv \"MacSync-LPS-ToF-X1\\(Amazon order\\).bin\" \"custom/MacSync-LPS-ToF-X1-AMZ.bin\")",
       "PowerShell($m = Get-Content 'LoRaWAN/sensors_v1.json' -Raw | ConvertFrom-Json; foreach \\($p in $m.PSObject.Properties\\) { foreach \\($v in $p.Value.versions\\) { foreach \\($f in @\\($v.binpath, $v.photopath\\)\\) { if \\(Test-Path $f\\) { \"OK       $f\" } else { \"MISSING  $f\" } } } }; git status --short)",
-      "PowerShell($root = 'c:\\\\Users\\\\NETIZENS\\\\Desktop\\\\Macnman data\\\\Github\\\\macnman_firmware-s'; $m = Get-Content \"$root\\\\LoRaWAN\\\\sensors_v1.json\" -Raw | ConvertFrom-Json; foreach \\($p in $m.PSObject.Properties\\) { foreach \\($v in $p.Value.versions\\) { foreach \\($f in @\\($v.binpath, $v.photopath\\)\\) { if \\(Test-Path \\(Join-Path $root $f\\)\\) { \"OK       $f\" } else { \"MISSING  $f\" } } } })"
+      "PowerShell($root = 'c:\\\\Users\\\\NETIZENS\\\\Desktop\\\\Macnman data\\\\Github\\\\macnman_firmware-s'; $m = Get-Content \"$root\\\\LoRaWAN\\\\sensors_v1.json\" -Raw | ConvertFrom-Json; foreach \\($p in $m.PSObject.Properties\\) { foreach \\($v in $p.Value.versions\\) { foreach \\($f in @\\($v.binpath, $v.photopath\\)\\) { if \\(Test-Path \\(Join-Path $root $f\\)\\) { \"OK       $f\" } else { \"MISSING  $f\" } } } })",
+      "Bash(mv \"custom/MacSync-LPS-ToF-X1-V1.0.1.bin\" .)",
+      "Bash(mv \"custom/MacSync-LPS-ToF-X1-AMZ.bin\" \"MacSync-LPS-ToF-X1-V1.0.1.bin\")",
+      "Bash(rmdir custom *)",
+      "PowerShell($root = 'c:\\\\Users\\\\NETIZENS\\\\Desktop\\\\Macnman data\\\\Github\\\\macnman_firmware-s'; $m = Get-Content \"$root\\\\LoRaWAN\\\\sensors_v1.json\" -Raw | ConvertFrom-Json; foreach \\($p in $m.PSObject.Properties\\) { foreach \\($v in $p.Value.versions\\) { foreach \\($f in @\\($v.binpath, $v.photopath\\)\\) { if \\(Test-Path \\(Join-Path $root $f\\)\\) { \"OK       $\\($v.application\\)  $f\" } else { \"MISSING  $\\($v.application\\)  $f\" } } } })",
+      "Bash(echo \"exit=$? \\(1 = no matches, good\\)\")"
     ]
   }
 }
