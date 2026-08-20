@@ -81,5 +81,31 @@
         "photopath": "LoRaWAN/LoRa/MacSync_MBS_DRS/MacSync_MBS_DRS_X1.png"
       }
     ]
+  },
+  "MacSync_MBS_TH_X1": {
+    "devicetype": "node",
+    "protocol": "LoRa",
+    "sensorName": "MacSync_MBS_TH_X1",
+    "type": "I2C",
+    "versions": [
+      {
+        "application": "V1.0.0",
+        "binpath": "LoRaWAN/LoRa/MacSync_MBS_TH/MacSync_MBS_TH_X1.bin",
+        "photopath": "LoRaWAN/LoRa/MacSync_MBS_TH/MacSync_MBS_TH_X1.png"
+      }
+    ]
+  },
+  "MacSync_MPV_X1": {
+    "devicetype": "node",
+    "protocol": "LoRa",
+    "sensorName": "MacSync_MPV_X1",
+    "type": "RS485",
+    "versions": [
+      {
+        "application": "V1.0.0",
+        "binpath": "LoRaWAN/LoRa/MacSync_MPV/MacSync_MPV_X1.bin",
+        "photopath": "LoRaWAN/LoRa/MacSync_MPV/MacSync_MPV_X1.png"
+      }
+    ]
   }
 }
