@@ -107,5 +107,18 @@
         "photopath": "LoRaWAN/LoRa/MacSync_MPV/MacSync_MPV_X1.png"
       }
     ]
+  },
+  "MacSync_WiFi_TH_BS_X1": {
+    "devicetype": "node",
+    "protocol": "Wi-Fi",
+    "sensorName": "MacSync_WiFi_TH_BS_X1",
+    "type": "I2C",
+    "versions": [
+      {
+        "application": "V1.0.0",
+        "binpath": "Wi-Fi/Sensors/MacSync_WiFi_TH_BS/MacSync_WiFi_TH_BS_X1.bin",
+        "photopath": "Wi-Fi/Sensors/MacSync_WiFi_TH_BS/MacSync_WiFi_TH_BS_X1.png"
+      }
+    ]
   }
 }
