@@ -77,8 +77,8 @@
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "LoRaWAN/LoRa/MacSync_MBS_DRS/MacSync_MBS_DRS_X1.bin",
-        "photopath": "LoRaWAN/LoRa/MacSync_MBS_DRS/MacSync_MBS_DRS_X1.png"
+        "binpath": "LoRa/MacSync_MBS_DRS/MacSync_MBS_DRS_X1.bin",
+        "photopath": "LoRa/MacSync_MBS_DRS/MacSync_MBS_DRS_X1.png"
       }
     ]
   },
@@ -90,8 +90,8 @@
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "LoRaWAN/LoRa/MacSync_MBS_TH/MacSync_MBS_TH_X1.bin",
-        "photopath": "LoRaWAN/LoRa/MacSync_MBS_TH/MacSync_MBS_TH_X1.png"
+        "binpath": "LoRa/MacSync_MBS_TH/MacSync_MBS_TH_X1.bin",
+        "photopath": "LoRa/MacSync_MBS_TH/MacSync_MBS_TH_X1.png"
       }
     ]
   },
@@ -103,8 +103,8 @@
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "LoRaWAN/LoRa/MacSync_MPV/MacSync_MPV_X1.bin",
-        "photopath": "LoRaWAN/LoRa/MacSync_MPV/MacSync_MPV_X1.png"
+        "binpath": "LoRa/MacSync_MPV/MacSync_MPV_X1.bin",
+        "photopath": "LoRa/MacSync_MPV/MacSync_MPV_X1.png"
       }
     ]
   },
