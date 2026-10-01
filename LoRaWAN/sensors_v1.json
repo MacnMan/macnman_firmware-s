@@ -120,5 +120,18 @@
         "photopath": "Wi-Fi/Sensors/MacSync_WiFi_TH_BS/MacSync_WiFi_TH_BS_X1.png"
       }
     ]
+  },
+  "MacSync_WiFi_MS7_BSD": {
+    "devicetype": "datalogger",
+    "protocol": "Wi-Fi",
+    "sensorName": "MacSync_WiFi_MS7_BSD",
+    "type": "RS485",
+    "versions": [
+      {
+        "application": "V1.0.0",
+        "binpath": "Wi-Fi/Datalogger/MacSync_WiFi_MS7_BSD/MacSync_WiFi_MS7_BSD.bin",
+        "photopath": "Wi-Fi/Datalogger/MacSync_WiFi_MS7_BSD/MacSync_WiFi_MS7_BSD.png"
+      }
+    ]
   }
 }
