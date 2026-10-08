@@ -116,8 +116,8 @@
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "Wi-Fi/Sensors/MacSync_WiFi_TH_BS/MS-WBSD-TH_X1.bin",
-        "photopath": "Wi-Fi/Sensors/MacSync_WiFi_TH_BS/MS-WBSD-TH_X1.png"
+        "binpath": "Wi-Fi/Sensors/MS-WBSD-TH_X1/MS-WBSD-TH_X1.bin",
+        "photopath": "Wi-Fi/Sensors/MS-WBSD-TH_X1/MS-WBSD-TH_X1.png"
       }
     ]
   },
