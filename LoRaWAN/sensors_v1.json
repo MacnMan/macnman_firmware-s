@@ -108,29 +108,29 @@
       }
     ]
   },
-  "MacSync_WiFi_TH_BS_X1": {
+  "MS-WBSD-TH_X1": {
     "devicetype": "node",
     "protocol": "Wi-Fi",
-    "sensorName": "MacSync_WiFi_TH_BS_X1",
+    "sensorName": "MS-WBSD-TH_X1",
     "type": "I2C",
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "Wi-Fi/Sensors/MacSync_WiFi_TH_BS/MacSync_WiFi_TH_BS_X1.bin",
-        "photopath": "Wi-Fi/Sensors/MacSync_WiFi_TH_BS/MacSync_WiFi_TH_BS_X1.png"
+        "binpath": "Wi-Fi/Sensors/MacSync_WiFi_TH_BS/MS-WBSD-TH_X1.bin",
+        "photopath": "Wi-Fi/Sensors/MacSync_WiFi_TH_BS/MS-WBSD-TH_X1.png"
       }
     ]
   },
-  "MacSync_WiFi_MS7_BSD": {
+  "MS-WBSD-MS7_X1": {
     "devicetype": "datalogger",
     "protocol": "Wi-Fi",
-    "sensorName": "MacSync_WiFi_MS7_BSD",
+    "sensorName": "MS-WBSD-MS7_X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "Wi-Fi/Datalogger/MacSync_WiFi_MS7_BSD/MacSync_WiFi_MS7_BSD.bin",
-        "photopath": "Wi-Fi/Datalogger/MacSync_WiFi_MS7_BSD/MacSync_WiFi_MS7_BSD.png"
+        "binpath": "Wi-Fi/Datalogger/MS-WBSD-MS7_X1/MS-WBSD-MS7_X1.bin",
+        "photopath": "Wi-Fi/Datalogger/MS-WBSD-MS7_X1/MS-WBSD-MS7_X1.png"
       }
     ]
   },
