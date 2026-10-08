@@ -116,8 +116,8 @@
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "Wi-Fi/Sensors/MS_WBSD_TH_X1/MS_WBSD_TH_X1.bin",
-        "photopath": "Wi-Fi/Sensors/MS_WBSD_TH_X1/MS_WBSD_TH_X1.png"
+        "binpath": "Wi-Fi/Sensors/MS-WBSD-TH-X1/MS-WBSD-TH-X1.bin",
+        "photopath": "Wi-Fi/Sensors/MS-WBSD-TH-X1/MS-WBSD-TH-X1.png"
       }
     ]
   },
@@ -129,12 +129,12 @@
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "Wi-Fi/Datalogger/MS_WBSD_MS7_X1/MS_WBSD_MS7_X1.bin",
-        "photopath": "Wi-Fi/Datalogger/MS_WBSD_MS7_X1/MS_WBSD_MS7_X1.png"
+        "binpath": "Wi-Fi/Datalogger/MS-WBSD-MS7_X1/MS-WBSD-MS7_X1.bin",
+        "photopath": "Wi-Fi/Datalogger/MS-WBSD-MS7_X1/MS-WBSD-MS7_X1.png"
       }
     ]
   },
-    "MacSync_LPS_STD_X1": {
+  "MacSync_LPS_STD_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
     "sensorName": "MacSync_LPS_STD_X1",
