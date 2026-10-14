@@ -147,16 +147,16 @@
       }
     ]
   },
-  "MS_WBD_MS7_X1": {
+  "MS_WBD_STD_X1": {
     "devicetype": "datalogger",
     "protocol": "Wi-Fi",
-    "sensorName": "MS_WBD_MS7_X1",
+    "sensorName": "MS-WBD-STD_X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "Wi-Fi/Datalogger/MS-WBD-MS7_X1/MS-WBD-MS7_X1.bin",
-        "photopath": "Wi-Fi/Datalogger/MS-WBD-MS7_X1/MS-WBD-MS7_X1.png"
+        "binpath": "Wi-Fi/Datalogger/MS-WBD-STD_X1/MS-WBD-STD_X1.bin",
+        "photopath": "Wi-Fi/Datalogger/MS-WBD-STD_X1/MS-WBD-STD_X1.png"
       }
     ]
   },
