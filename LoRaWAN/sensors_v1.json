@@ -146,5 +146,19 @@
         "photopath": "LoRaWAN/sensors/MacSync-LPS-STD/MacSync_LPS_STD_X1.png"
       }
     ]
+  },
+  "MS_WBD_MS7_X1": {
+    "devicetype": "datalogger",
+    "protocol": "Wi-Fi",
+    "sensorName": "MS_WBD_MS7_X1",
+    "type": "RS485",
+    "versions": [
+      {
+        "application": "V1.0.0",
+        "binpath": "Wi-Fi/Datalogger/MS-WBD-MS7_X1/MS-WBD-MS7_X1.bin",
+        "photopath": "Wi-Fi/Datalogger/MS-WBD-MS7_X1/MS-WBD-MS7_X1.png"
+      }
+    ]
   }
 }
+
