@@ -121,16 +121,29 @@
       }
     ]
   },
-  "MS_WBSD_MS7_X1": {
+  "MY_W1D_SS_X1": {
     "devicetype": "datalogger",
     "protocol": "Wi-Fi",
-    "sensorName": "MS_WBSD_MS7_X1",
+    "sensorName": "MY-W1D-SS-X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "Wi-Fi/Datalogger/MS-WBSD-MS7_X1/MS-WBSD-MS7_X1.bin",
-        "photopath": "Wi-Fi/Datalogger/MS-WBSD-MS7_X1/MS-WBSD-MS7_X1.png"
+        "binpath": "Wi-Fi/Datalogger/MY-W1D-SS-X1/MY-W1D-SS-X1.bin",
+        "photopath": "Wi-Fi/Datalogger/MY-W1D-SS-X1/MY-W1D-SS-X1.png"
+      }
+    ]
+  },
+  "MY_W1D_TH_X1": {
+    "devicetype": "datalogger",
+    "protocol": "Wi-Fi",
+    "sensorName": "MY-W1D-TH-X1",
+    "type": "I2C",
+    "versions": [
+      {
+        "application": "V1.0.0",
+        "binpath": "Wi-Fi/Datalogger/MY-W1D-TH-X1/MY-W1D-TH-X1.bin",
+        "photopath": "Wi-Fi/Datalogger/MY-W1D-TH-X1/MY-W1D-TH-X1.png"
       }
     ]
   },
