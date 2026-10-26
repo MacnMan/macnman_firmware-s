@@ -198,6 +198,19 @@
         "photopath": "LoRaWAN/controllers/MacSet-LPC-ST/MacSet_LPC_STD_X1.png"
       }
     ]
+  },
+    "Macset_LX1": {
+    "devicetype": "node",
+    "protocol": "LoRaWAN",
+    "sensorName": "Macset_LX1",
+    "type": "RS485",
+    "versions": [
+      {
+        "application": "V0.0.1",
+        "binpath": "LoRaWAN/controllers/Macset_LX1/Macset_LX1.bin",
+        "photopath": "LoRaWAN/controllers/Macset_LX1/Macset_LX1.png"
+      }
+    ]
   }
 }
 
