@@ -95,42 +95,42 @@
       }
     ]
   },
-  "MacSync_MBS_DRS_X1": {
+  "MY_M1_DRS_X1": {
     "devicetype": "node",
     "protocol": "LoRa",
-    "sensorName": "MacSync_MBS_DRS_X1",
+    "sensorName": "MY-M1-DRS-X1",
     "type": "Digital",
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "LoRa/MacSync_MBS_DRS/MacSync_MBS_DRS_X1.bin",
-        "photopath": "LoRa/MacSync_MBS_DRS/MacSync_MBS_DRS_X1.png"
+        "binpath": "LoRa/MY-M1-DRS-X1/MY-M1-DRS-X1.bin",
+        "photopath": "LoRa/MY-M1-DRS-X1/MY-M1-DRS-X1.png"
       }
     ]
   },
-  "MacSync_MBS_TH_X1": {
+  "MY_M1_TH_X1": {
     "devicetype": "node",
     "protocol": "LoRa",
-    "sensorName": "MacSync_MBS_TH_X1",
+    "sensorName": "MY-M1-TH-X1",
     "type": "I2C",
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "LoRa/MacSync_MBS_TH/MacSync_MBS_TH_X1.bin",
-        "photopath": "LoRa/MacSync_MBS_TH/MacSync_MBS_TH_X1.png"
+        "binpath": "LoRa/MY-M1-TH-X1/MY-M1-TH-X1.bin",
+        "photopath": "LoRa/MY-M1-TH-X1/MY-M1-TH-X1.png"
       }
     ]
   },
-  "MacSync_MPV_X1": {
+  "MY_M3_CV_X1": {
     "devicetype": "node",
     "protocol": "LoRa",
-    "sensorName": "MacSync_MPV_X1",
+    "sensorName": "MY-M3-CV-X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "LoRa/MacSync_MPV/MacSync_MPV_X1.bin",
-        "photopath": "LoRa/MacSync_MPV/MacSync_MPV_X1.png"
+        "binpath": "LoRa/MY-M3-CV-X1/MY-M3-CV-X1.bin",
+        "photopath": "LoRa/MY-M3-CV-X1/MY-M3-CV-X1.png"
       }
     ]
   },
