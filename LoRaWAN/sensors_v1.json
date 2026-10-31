@@ -95,6 +95,19 @@
       }
     ]
   },
+  "MY_L1_OD_X1": {
+    "devicetype": "node",
+    "protocol": "LoRaWAN",
+    "sensorName": "MY-L1-OD-X1",
+    "type": "Analog",
+    "versions": [
+      {
+        "application": "V1.0.0",
+        "binpath": "LoRaWAN/sensors/MY-L1-OD-X1/MY-L1-OD-X1.bin",
+        "photopath": "LoRaWAN/sensors/MY-L1-OD-X1/MY-L1-OD-X1.png"
+      }
+    ]
+  },
   "MY_M1_DRS_X1": {
     "devicetype": "node",
     "protocol": "LoRa",
