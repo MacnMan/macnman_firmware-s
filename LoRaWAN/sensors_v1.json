@@ -108,6 +108,19 @@
       }
     ]
   },
+  "MY_L1_LPS28_X1": {
+    "devicetype": "node",
+    "protocol": "LoRaWAN",
+    "sensorName": "MY-L1-LPS28-X1",
+    "type": "I2C",
+    "versions": [
+      {
+        "application": "V1.0.0",
+        "binpath": "LoRaWAN/sensors/MY-L1-LPS28-X1/MY-L1-LPS28-X1.bin",
+        "photopath": "LoRaWAN/sensors/MY-L1-LPS28-X1/MY-L1-LPS28-X1.png"
+      }
+    ]
+  },
   "MY_M1_DRS_X1": {
     "devicetype": "node",
     "protocol": "LoRa",
