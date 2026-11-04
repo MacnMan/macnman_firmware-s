@@ -238,16 +238,29 @@
       }
     ]
   },
-    "MS_L35_CT_X1": {
+    "MS-L35-CT-X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MS_L35_CT_X1",
+    "sensorName": "MS-L35-CT-X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0.1",
-        "binpath": "LoRaWAN/controllers/MS_L35_CT_X1/MS_L35_CT_X1_V1.0.1.bin",
-        "photopath": "LoRaWAN/controllers/MS_L35_CT_X1/MS_L35_CT_X1_V1.0.1.png"
+        "binpath": "LoRaWAN/controllers/MS-L35-CT-X1/MS-L35-CT-X1-V1.0.1.bin",
+        "photopath": "LoRaWAN/controllers/MS-L35-CT-X1/MS-L35-CT-X1.png"
+      }
+    ]
+  },
+  "MS-L3-CT-X2": {
+    "devicetype": "node",
+    "protocol": "LoRaWAN",
+    "sensorName": "MS-L3-CT-X2",
+    "type": "RS485",
+    "versions": [
+      {
+        "application": "V1.0.1",
+        "binpath": "LoRaWAN/controllers/MS-L3-CT-X2/MS-L3-CT-X2-V1.0.1.bin",
+        "photopath": "LoRaWAN/controllers/MS-L3-CT-X2/MS-L3-CT-X2.png"
       }
     ]
   }
