@@ -173,6 +173,45 @@
       }
     ]
   },
+  "MY_W1D_RTD_X1": {
+    "devicetype": "datalogger",
+    "protocol": "Wi-Fi",
+    "sensorName": "MY-W1D-RTD-X1",
+    "type": "RS485",
+    "versions": [
+      {
+        "application": "V1.0.0",
+        "binpath": "Wi-Fi/Datalogger/MY-W1D-RTD-X1/MY-W1D-RTD-X1.bin",
+        "photopath": "Wi-Fi/Datalogger/MY-W1D-RTD-X1/MY-W1D-RTD-X1.png"
+      }
+    ]
+  },
+  "MY_W3D_WEC_X1": {
+    "devicetype": "datalogger",
+    "protocol": "Wi-Fi",
+    "sensorName": "MY-W3D-WEC-X1",
+    "type": "RS485",
+    "versions": [
+      {
+        "application": "V1.0",
+        "binpath": "Wi-Fi/Datalogger/MY-W3D-WEC-X1/MY-W3D-WEC-X1.bin",
+        "photopath": "Wi-Fi/Datalogger/MY-W3D-WEC-X1/MY-W3D-WEC-X1.png"
+      }
+    ]
+  },
+  "MY_W3D_WPH_X1": {
+    "devicetype": "datalogger",
+    "protocol": "Wi-Fi",
+    "sensorName": "MY-W3D-WPH-X1",
+    "type": "RS485",
+    "versions": [
+      {
+        "application": "V1.0",
+        "binpath": "Wi-Fi/Datalogger/MY-W3D-WPH-X1/MY-W3D-WPH-X1.bin",
+        "photopath": "Wi-Fi/Datalogger/MY-W3D-WPH-X1/MY-W3D-WPH-X1.png"
+      }
+    ]
+  },
   "MacSync_LPS_STD_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
