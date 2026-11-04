@@ -1,27 +1,27 @@
 {
-  "MacSync_LBS_TH_X1": {
+  "MY_L1_TH_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MacSync_LBS_TH_X1",
+    "sensorName": "MY-L1-TH-X1",
     "type": "I2C",
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "LoRaWAN/sensors/MacSync-LBS-TH/MacSync_LBS_TH_X1.bin",
-        "photopath": "LoRaWAN/sensors/MacSync-LBS-TH/MacSync_LBS_TH_X1.png"
+        "binpath": "LoRaWAN/sensors/MY-L1-TH-X1/MY-L1-TH-X1.bin",
+        "photopath": "LoRaWAN/sensors/MY-L1-TH-X1/MY-L1-TH-X1.png"
       }
     ]
   },
-  "MacSync_LBS_NS_X1": {
+  "MY_L1_NS_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MacSync_LBS_NS_X1",
+    "sensorName": "MY-L1-NS-X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "LoRaWAN/sensors/MacSync-LBS-NS/MacSync_LBS_NS_X1.bin",
-        "photopath": "LoRaWAN/sensors/MacSync-LBS-NS/MacSync_LBS_NS_X1.png"
+        "binpath": "LoRaWAN/sensors/MY-L1-NS-X1/MY-L1-NS-X1.bin",
+        "photopath": "LoRaWAN/sensors/MY-L1-NS-X1/MY-L1-NS-X1.png"
       }
     ]
   },
@@ -56,16 +56,16 @@
       }
     ]
   },
-  "MacSync_LBS_STD_X1": {
+  "MY_L1_CV_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MacSync_LBS_STD_X1",
+    "sensorName": "MY-L1-CV-X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "LoRaWAN/sensors/MacSync-LBS-STD/MacSync_LBS_STD_X1.bin",
-        "photopath": "LoRaWAN/sensors/MacSync-LBS-STD/MacSync_LBS_STD_X1.png"
+        "binpath": "LoRaWAN/sensors/MY-L1-CV-X1/MY-L1-CV-X1.bin",
+        "photopath": "LoRaWAN/sensors/MY-L1-CV-X1/MY-L1-CV-X1.png"
       }
     ]
   },
@@ -95,42 +95,68 @@
       }
     ]
   },
-  "MacSync_MBS_DRS_X1": {
+  "MY_L1_OD_X1": {
     "devicetype": "node",
-    "protocol": "LoRa",
-    "sensorName": "MacSync_MBS_DRS_X1",
-    "type": "Digital",
+    "protocol": "LoRaWAN",
+    "sensorName": "MY-L1-OD-X1",
+    "type": "Analog",
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "LoRa/MacSync_MBS_DRS/MacSync_MBS_DRS_X1.bin",
-        "photopath": "LoRa/MacSync_MBS_DRS/MacSync_MBS_DRS_X1.png"
+        "binpath": "LoRaWAN/sensors/MY-L1-OD-X1/MY-L1-OD-X1.bin",
+        "photopath": "LoRaWAN/sensors/MY-L1-OD-X1/MY-L1-OD-X1.png"
       }
     ]
   },
-  "MacSync_MBS_TH_X1": {
+  "MY_L1_LPS28_X1": {
     "devicetype": "node",
-    "protocol": "LoRa",
-    "sensorName": "MacSync_MBS_TH_X1",
+    "protocol": "LoRaWAN",
+    "sensorName": "MY-L1-LPS28-X1",
     "type": "I2C",
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "LoRa/MacSync_MBS_TH/MacSync_MBS_TH_X1.bin",
-        "photopath": "LoRa/MacSync_MBS_TH/MacSync_MBS_TH_X1.png"
+        "binpath": "LoRaWAN/sensors/MY-L1-LPS28-X1/MY-L1-LPS28-X1.bin",
+        "photopath": "LoRaWAN/sensors/MY-L1-LPS28-X1/MY-L1-LPS28-X1.png"
       }
     ]
   },
-  "MacSync_MPV_X1": {
+  "MY_M1_DRS_X1": {
     "devicetype": "node",
     "protocol": "LoRa",
-    "sensorName": "MacSync_MPV_X1",
+    "sensorName": "MY-M1-DRS-X1",
+    "type": "Digital",
+    "versions": [
+      {
+        "application": "V1.0.0",
+        "binpath": "LoRa/MY-M1-DRS-X1/MY-M1-DRS-X1.bin",
+        "photopath": "LoRa/MY-M1-DRS-X1/MY-M1-DRS-X1.png"
+      }
+    ]
+  },
+  "MY_M1_TH_X1": {
+    "devicetype": "node",
+    "protocol": "LoRa",
+    "sensorName": "MY-M1-TH-X1",
+    "type": "I2C",
+    "versions": [
+      {
+        "application": "V1.0.0",
+        "binpath": "LoRa/MY-M1-TH-X1/MY-M1-TH-X1.bin",
+        "photopath": "LoRa/MY-M1-TH-X1/MY-M1-TH-X1.png"
+      }
+    ]
+  },
+  "MY_M3_CV_X1": {
+    "devicetype": "node",
+    "protocol": "LoRa",
+    "sensorName": "MY-M3-CV-X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "LoRa/MacSync_MPV/MacSync_MPV_X1.bin",
-        "photopath": "LoRa/MacSync_MPV/MacSync_MPV_X1.png"
+        "binpath": "LoRa/MY-M3-CV-X1/MY-M3-CV-X1.bin",
+        "photopath": "LoRa/MY-M3-CV-X1/MY-M3-CV-X1.png"
       }
     ]
   },
@@ -173,55 +199,16 @@
       }
     ]
   },
-  "MY_W1D_RTD_X1": {
-    "devicetype": "datalogger",
-    "protocol": "Wi-Fi",
-    "sensorName": "MY-W1D-RTD-X1",
-    "type": "RS485",
-    "versions": [
-      {
-        "application": "V1.0.0",
-        "binpath": "Wi-Fi/Datalogger/MY-W1D-RTD-X1/MY-W1D-RTD-X1.bin",
-        "photopath": "Wi-Fi/Datalogger/MY-W1D-RTD-X1/MY-W1D-RTD-X1.png"
-      }
-    ]
-  },
-  "MY_W3D_WEC_X1": {
-    "devicetype": "datalogger",
-    "protocol": "Wi-Fi",
-    "sensorName": "MY-W3D-WEC-X1",
-    "type": "RS485",
-    "versions": [
-      {
-        "application": "V1.0",
-        "binpath": "Wi-Fi/Datalogger/MY-W3D-WEC-X1/MY-W3D-WEC-X1.bin",
-        "photopath": "Wi-Fi/Datalogger/MY-W3D-WEC-X1/MY-W3D-WEC-X1.png"
-      }
-    ]
-  },
-  "MY_W3D_WPH_X1": {
-    "devicetype": "datalogger",
-    "protocol": "Wi-Fi",
-    "sensorName": "MY-W3D-WPH-X1",
-    "type": "RS485",
-    "versions": [
-      {
-        "application": "V1.0",
-        "binpath": "Wi-Fi/Datalogger/MY-W3D-WPH-X1/MY-W3D-WPH-X1.bin",
-        "photopath": "Wi-Fi/Datalogger/MY-W3D-WPH-X1/MY-W3D-WPH-X1.png"
-      }
-    ]
-  },
-  "MacSync_LPS_STD_X1": {
+  "MY_L3_CV_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MacSync_LPS_STD_X1",
+    "sensorName": "MY-L3-CV-X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "LoRaWAN/sensors/MacSync-LPS-STD/MacSync_LPS_STD_X1.bin",
-        "photopath": "LoRaWAN/sensors/MacSync-LPS-STD/MacSync_LPS_STD_X1.png"
+        "binpath": "LoRaWAN/sensors/MY-L3-CV-X1/MY-L3-CV-X1.bin",
+        "photopath": "LoRaWAN/sensors/MY-L3-CV-X1/MY-L3-CV-X1.png"
       }
     ]
   },
@@ -238,29 +225,42 @@
       }
     ]
   },
-  "MacSet_LPC_STD_X1": {
+  "MS_L5_CT_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MacSet_LPC_STD_X1",
+    "sensorName": "MS-L5-CT-X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0.0",
-        "binpath": "LoRaWAN/controllers/MacSet-LPC-ST/MacSet_LPC_STD_X1.bin",
-        "photopath": "LoRaWAN/controllers/MacSet-LPC-ST/MacSet_LPC_STD_X1.png"
+        "binpath": "LoRaWAN/controllers/MS-L5-CT-X1/MS-L5-CT-X1.bin",
+        "photopath": "LoRaWAN/controllers/MS-L5-CT-X1/MS-L5-CT-X1.png"
       }
     ]
   },
-    "Macset_LX1": {
+    "MS-L35-CT-X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "Macset_LX1",
+    "sensorName": "MS-L35-CT-X1",
     "type": "RS485",
     "versions": [
       {
-        "application": "V0.0.1",
-        "binpath": "LoRaWAN/controllers/Macset_LX1/Macset_LX1.bin",
-        "photopath": "LoRaWAN/controllers/Macset_LX1/Macset_LX1.png"
+        "application": "V1.0.1",
+        "binpath": "LoRaWAN/controllers/MS-L35-CT-X1/MS-L35-CT-X1-V1.0.1.bin",
+        "photopath": "LoRaWAN/controllers/MS-L35-CT-X1/MS-L35-CT-X1.png"
+      }
+    ]
+  },
+  "MS-L3-CT-X2": {
+    "devicetype": "node",
+    "protocol": "LoRaWAN",
+    "sensorName": "MS-L3-CT-X2",
+    "type": "RS485",
+    "versions": [
+      {
+        "application": "V1.0.1",
+        "binpath": "LoRaWAN/controllers/MS-L3-CT-X2/MS-L3-CT-X2-V1.0.1.bin",
+        "photopath": "LoRaWAN/controllers/MS-L3-CT-X2/MS-L3-CT-X2.png"
       }
     ]
   }
