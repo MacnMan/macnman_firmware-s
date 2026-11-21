@@ -310,8 +310,8 @@
     "type": "RS485",
     "versions": [
       {
-        "application": "V1.0.4",
-        "binpath": "LoRaWAN/controllers/MS-L3-CT-X2/MS-L3-CT-X2-V1.0.4.bin",
+        "application": "V1.0.5",
+        "binpath": "LoRaWAN/controllers/MS-L3-CT-X2/MS-L3-CT-X2-V1.0.5.bin",
         "photopath": "LoRaWAN/controllers/MS-L3-CT-X2/MS-L3-CT-X2.png"
       }
     ]
