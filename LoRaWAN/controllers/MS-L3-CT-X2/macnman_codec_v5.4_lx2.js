@@ -375,6 +375,22 @@ function Decoder(bytes, port) {
     if (Number(port) === 3 && bytes && bytes.length > 0) {
         return decodeAtReply(bytes);
     }
+    // V5.4: ADR (17), message type (18), ADR + SF + type (19) answers, as LX1
+    if ((Number(port) === 17 || Number(port) === 18) && bytes && bytes.length === 2) {
+        decode.lorawanConfig = Number(port) === 17 ?
+            { messageType: "ADR setting", adr: bytes[0] === 1 ? "ON" : "OFF" } :
+            { messageType: "Message type setting", msgtype: bytes[0] === 1 ? "CONFIRMED" : "UNCONFIRMED" };
+        return decode;
+    }
+    if (Number(port) === 19 && bytes && bytes.length === 4) {
+        decode.lorawanConfig = {
+            messageType: "LoRaWAN settings",
+            adr: bytes[0] === 1 ? "ON" : "OFF",
+            sf: bytes[1],
+            msgtype: bytes[2] === 1 ? "CONFIRMED" : "UNCONFIRMED"
+        };
+        return decode;
+    }
     if (!bytes || bytes.length < 2) {
         return decode;
     }
@@ -474,7 +490,7 @@ function scheduleRef(slot, type) {
 var RELAY_REASONS = ["not changed", "schedule ON time", "schedule OFF time",
     "trigger condition met", "trigger condition no longer met",
     "trigger sensor not answering", "trigger time window ended"];
-var TRIGGER_CONDITIONS = ["greater than", "less than", "between 10 and 40"];
+var TRIGGER_CONDITIONS = ["greater than", "less than", "between"];
 var NO_VALUE = -2147483648;
 
 function readInt32(bytes, i) {
@@ -484,7 +500,7 @@ function readInt32(bytes, i) {
 
 // Adds relay<n>Reason and, for a trigger schedule, relay<n>Trigger from the
 // reason block at bytes[i].
-function addRelayReason(ev, n, bytes, i) {
+function addRelayReason(ev, n, bytes, i, maxAt) {
     var reason = bytes[i];
     if (reason === 0) {
         return;
@@ -498,7 +514,12 @@ function addRelayReason(ev, n, bytes, i) {
             condition: TRIGGER_CONDITIONS[bytes[i + 2]] || "unknown",
             value: value === NO_VALUE ? "none" : value / 100
         };
-        if (threshold !== NO_VALUE) {
+        var max = (maxAt >= 0 && bytes.length >= maxAt + 4) ? readInt32(bytes, maxAt) : NO_VALUE;
+        if (bytes[i + 2] === 2 && max !== NO_VALUE) {
+            // between the user's Min and Max (LX2 firmware 1.0.0, as LX1)
+            trigger.min = threshold / 100;
+            trigger.max = max / 100;
+        } else if (threshold !== NO_VALUE) {
             trigger.threshold = threshold / 100;
         }
         ev["relay" + n + "Trigger"] = trigger;
@@ -521,7 +542,7 @@ function decodeRelayEvent(bytes) {
     ev.relay1Schedule = scheduleRef(bytes[6], bytes[7]);
     var reasons = bytes.length >= 36;
     if (reasons) {
-        addRelayReason(ev, 1, bytes, 14);
+        addRelayReason(ev, 1, bytes, 14, 38);
     }
     if (three) {
         ev.motor = bytes[2] === 1 ? "START" : "STOP";
@@ -530,7 +551,7 @@ function decodeRelayEvent(bytes) {
         ev.relay2Changed = (bytes[4] & 0x02) !== 0;
         ev.relay2Schedule = scheduleRef(bytes[8], bytes[9]);
         if (reasons) {
-            addRelayReason(ev, 2, bytes, 25);
+            addRelayReason(ev, 2, bytes, 25, 42);
         }
     }
     if (bytes.length >= 38) { // V5.4, LX2: relays 1-8 and the changed ones
@@ -1058,9 +1079,15 @@ function decodeResponce(bytes) {
                 responceData.onTime = readUint32(bytes, 17);
                 responceData.offTime = readUint32(bytes, 21);
             } else if (bytes[15] === 3) {
-                responceData.sensorValue = readUint32(bytes, 17) | 0;
+                // LX2 firmware 1.0.0 (as LX1): x 100 with 2 decimals, between with Min / Max
+                var x100 = bytes.length >= 31;
+                responceData.sensorValue = x100 ? readInt32(bytes, 17) / 100 : (readUint32(bytes, 17) | 0);
                 responceData.level = bytes[21];
                 responceData.rs485Field = bytes[22];
+                if (x100 && bytes[21] === 2) {
+                    responceData.min = responceData.sensorValue;
+                    responceData.max = readInt32(bytes, 23) / 100;
+                }
             }
             responceData.Systimestamp = readTimestamp(bytes);
             break;
@@ -1418,7 +1445,7 @@ var NAMES_FUNCTION = { "coils": 1, "discrete inputs": 2, "holding registers": 3,
 var NAMES_DATATYPE = { "int16": 0, "uint16": 1, "int32": 2, "int32 swapped": 3, "float": 4,
     "float swapped": 5, "off": 6 };
 var NAMES_SCHEDULE = { "regular": 1, "cyclic": 2, "trigger": 3, "delay cyclic": 4 };
-var NAMES_CONDITION = { "greater than": 0, "less than": 1 };
+var NAMES_CONDITION = { "greater than": 0, "less than": 1, "between": 2 };
 var NAMES_PARITY = { "none": 0, "even": 1, "odd": 2 };
 var NAMES_INPUT = { "a1": 101, "a2": 102, "a3": 103, "a4": 104 };
 
@@ -1706,9 +1733,17 @@ var P3_SET = {
         if (type === 2) {
             t += "," + durationSeconds(d.onTime, "onTime") + "," + durationSeconds(d.offTime, "offTime");
         } else if (type === 3) {
-            t += "," + requireInt(d.sensorValue, "sensorValue", -2147483648, 2147483647) + "," +
-                named(d.condition, "condition", NAMES_CONDITION, 0, 1) + "," +
-                named(d.rs485Field, "rs485Field", NAMES_INPUT, 1, 104);
+            var cond = named(d.condition, "condition", NAMES_CONDITION, 0, 2);
+            var watch = named(d.rs485Field, "rs485Field", NAMES_INPUT, 1, 104);
+            if (cond === 2) {
+                var mn = requireHundredths(d.min, "min"), mx = requireHundredths(d.max, "max");
+                if (mn > mx) { throw new Error("min cannot be above max"); }
+                t += "," + hundredthsText(mn) + ",2," + watch + "," + hundredthsText(mx);
+            } else {
+                var th = d.threshold !== undefined ? requireHundredths(d.threshold, "threshold") :
+                    requireInt(d.sensorValue, "threshold", -21474836, 21474836) * 100;
+                t += "," + hundredthsText(th) + "," + cond + "," + watch;
+            }
         } else if (type === 4 && (d.sequences !== undefined || d.steps !== undefined)) {
             // V5.4: delay cyclic with its steps in one downlink: two AT commands with ";"
             t += ";" + P3_SET["schedule steps"](d);
@@ -1768,13 +1803,38 @@ function port3Named(data) {
     throw new Error("port 3: \"read\", \"set\" or \"do\" (or an AT command in \"at\")");
 }
 
+// A real value with up to 2 decimals, returned x 100 as a whole number
+// (25.5 -> 2550, -5 -> -500), as the LX1 codec (trigger limits).
+function requireHundredths(value, name) {
+    var v = Number(value);
+    if (value === undefined || value === null || value === "" || isNaN(v) ||
+        v < -21474836.48 || v > 21474836.47) {
+        throw new Error(name + " must be a number from -21474836.48 to 21474836.47");
+    }
+    var h = Math.round(v * 100);
+    if (Math.abs(h - v * 100) > 1e-6 * Math.max(1, Math.abs(v * 100))) {
+        throw new Error(name + " can have at most 2 decimals");
+    }
+    return h;
+}
+
+// x 100 -> the shortest text with up to 2 decimals (2550 -> "25.5"), as the board prints it
+function hundredthsText(h) {
+    var neg = h < 0, a = Math.abs(h), whole = Math.floor(a / 100), cents = a % 100;
+    var t = String(whole);
+    if (cents !== 0) {
+        t += "." + (cents < 10 ? "0" + cents : (cents % 10 === 0 ? String(cents / 10) : String(cents)));
+    }
+    return (neg ? "-" : "") + t;
+}
+
 function pick(a, b) {
     return a !== undefined ? a : b;
 }
 
 // V5.4: simple names (the old names still work): "count", "register", "coil", "field",
 // "enable", "name", "registerType", "type", "threshold", "input".
-var SIMPLE_NAMES = {"8": {"count": "numberofreg", "coil": "address"}, "9": {"count": "numberofreg", "register": "address"}, "10": {"field": "Field", "enable": "Enable", "name": "parameterName", "registerType": "functionCode", "count": "numberOfParameters", "register": "Registeraddress"}, "13": {"registerType": "functionCode", "count": "numberOfParameters", "register": "Registeraddress"}, "11": {"type": "alarmType", "threshold": "sensorValue", "input": "rs485Field"}};
+var SIMPLE_NAMES = {"8": {"count": "numberofreg", "coil": "address"}, "9": {"count": "numberofreg", "register": "address"}, "10": {"field": "Field", "enable": "Enable", "name": "parameterName", "registerType": "functionCode", "count": "numberOfParameters", "register": "Registeraddress"}, "13": {"registerType": "functionCode", "count": "numberOfParameters", "register": "Registeraddress"}, "11": {"type": "alarmType", "input": "rs485Field"}};
 var SIMPLE_NAMES_P3 = {
     // V5.4: the LX1 names on port 3 too (index of a schedule, Field of a Modbus field)
     "field": { "enable": "Enable", "registerType": "functionCode", "count": "numberOfParameters",
@@ -1782,7 +1842,7 @@ var SIMPLE_NAMES_P3 = {
     "field name": { "Field": "field" }, "field status": { "Field": "field" }, "field check": { "Field": "field" },
     "registers": { "registerType": "functionCode", "register": "Registeraddress" },
     "find slaves": { "registerType": "functionCode", "register": "Registeraddress" },
-    "schedule": { "type": "alarmType", "threshold": "sensorValue", "input": "rs485Field", "index": "slot" },
+    "schedule": { "type": "alarmType", "input": "rs485Field", "index": "slot" },
     "schedule steps": { "index": "slot" }, "schedule enable": { "index": "slot" },
     "delete schedule": { "index": "slot" }
 };
@@ -1956,10 +2016,28 @@ function encodeDownlink(input) {
                     throw new Error("onTime and offTime cannot both be 0");
                 }
             } else if (alarmType === 3) { // trigger
-                pushUint32(bytes, requireInt(data.sensorValue, "sensorValue", -2147483648, 4294967295));
-                bytes.push(
-                    named(pick(data.condition, data.level), "condition", NAMES_CONDITION, 0, 255),
-                    named(data.rs485Field, "rs485Field", NAMES_INPUT, 1, 255));
+                var condition = named(pick(data.condition, data.level), "condition", NAMES_CONDITION, 0, 2);
+                var trigField = named(data.rs485Field, "rs485Field", NAMES_INPUT, 1, 255);
+                if (data.threshold !== undefined || data.min !== undefined || data.max !== undefined) {
+                    // as LX1 (LX2 firmware 1.0.0): x 100 with sign, between with Min and Max (23 bytes)
+                    var low, high = 0;
+                    if (condition === 2) {
+                        low = requireHundredths(data.min, "min");
+                        high = requireHundredths(data.max, "max");
+                        if (low > high) {
+                            throw new Error("min cannot be above max");
+                        }
+                    } else {
+                        low = requireHundredths(data.threshold, "threshold");
+                    }
+                    pushUint32(bytes, low);
+                    bytes.push(condition, trigField);
+                    pushUint32(bytes, high);
+                } else {
+                    // older format (19 bytes): whole-number threshold
+                    pushUint32(bytes, requireInt(data.sensorValue, "sensorValue", -2147483648, 4294967295));
+                    bytes.push(condition, trigField);
+                }
             }
             break;
 
@@ -1985,6 +2063,21 @@ function encodeDownlink(input) {
 
         case 15: // read a Modbus field back: {"fPort":15,"field_read":1} (V5.4; "Field" and "index" still accepted)
             bytes.push(requireInt(pick(pick(data.field_read, data.Field), pick(data.field, data.index)), "field_read", 1, 20));
+            break;
+
+        case 17: // V5.4: ADR, as LX1 (LX2 firmware 1.0.0)
+            bytes.push(named(data.adr, "adr", { "off": 0, "on": 1 }, 0, 1));
+            break;
+
+        case 18: // V5.4: message type, as LX1: 1 confirmed, 0 unconfirmed
+            bytes.push(named(data.msgtype, "msgtype", { "unconfirmed": 0, "confirmed": 1 }, 0, 1));
+            break;
+
+        case 19: // V5.4: ADR, SF and message type, as LX1
+            bytes.push(
+                named(data.adr, "adr", { "off": 0, "on": 1 }, 0, 1),
+                requireInt(data.sf, "sf", 7, 12),
+                named(data.msgtype, "msgtype", { "unconfirmed": 0, "confirmed": 1 }, 0, 1));
             break;
 
         case 21: // V5.4: sampling settings (LX2 V1.0.1, as LX1), the bytes of the LBS-STD-X1 node
@@ -2199,6 +2292,10 @@ function encodeMacSetCommand(data) {
  *     time stamp), the FPort 21 echo as samplingConfig. Encoder FPort 21:
  *     {"fPort":21,"param":0,"count":5,"enable":1,"interval":60}.
  *     AT answers on FPort 3 decode as before.
+ * 53. As LX1 (LX2 firmware 1.0.0): trigger threshold with 2 decimals ("threshold":25.5, sent
+ *     x 100, 23 bytes), condition 2 "between" with "min" / "max"; the port 11 answer and the
+ *     relay event give them back; ports 17 adr, 18 msgtype, 19 adr + sf + msgtype, answered
+ *     on the same port (lorawanConfig). The old whole-number "sensorValue" still works.
  * 52. LX1 names (MacnMan_LoRaWAN_Decoders, MS_L5_CT_X1): "port", index, dayData, relayStatus,
  *     alarmType, threshold, condition, rs485Field, Field, Enable, functionCode, numberOfParameters,
  *     Registeraddress, numberofreg, address, param; port 15 index. dayData and relayStatus also
