@@ -1028,19 +1028,17 @@ function decodeResponce(bytes) {
         case 10: // Modbus field stored (port 10) or read back (port 15)
             // [4] field [5] slave [6] function [7] enable [8] data type
             // [9] number of values [10,11] register address, then the name (LX2)
-            // V5.4: readable, in the order of the Maya field screen
-            responceData.messageType = "Modbus field settings";
+            // V5.4: the names of the LX1 codec, plus the field's name (LX2)
             responceData.field = bytes[4];
-            responceData.enable = bytes[7] ? "on" : "off";
-            if (bytes.length > 16) {
-                responceData.name = bytesToText(bytes.slice(12, bytes.length - 4));
-            }
             responceData.slaveId = bytes[5];
-            responceData.registerType = MODBUS_FUNCTIONS[bytes[6]] || ("function " + bytes[6]);
-            responceData.dataType = SAMPLING_DATA_TYPES[bytes[8]] || ("type " + bytes[8]);
-            responceData.count = bytes[9];
-            responceData.register = readUint16(bytes, 10);
-            responceData.registerInMaya = readUint16(bytes, 10) + 1;
+            responceData.functionCode = bytes[6];
+            responceData.enable = bytes[7];
+            responceData.dataType = bytes[8];
+            responceData.numberOfResistors = bytes[9];
+            responceData.address = readUint16(bytes, 10);
+            if (bytes.length > 16) {
+                responceData.parameterName = bytesToText(bytes.slice(12, bytes.length - 4));
+            }
             responceData.Systimestamp = readTimestamp(bytes);
             break;
         case 11: // alarm stored (port 11) or read back (port 14)
@@ -1048,23 +1046,21 @@ function decodeResponce(bytes) {
             // [13] days [14] relay [15] type [16] enable, then
             // type 2: [17..20] ON s [21..24] OFF s
             // type 3: [17..20] threshold [21] level [22] field
-            responceData.slot = bytes[4];
-            responceData.startTime = clockText(readUint32(bytes, 5)); // V5.4: "06:00"
-            responceData.stopTime = clockText(readUint32(bytes, 9));
-            responceData.days = scheduleDays(bytes[13]); // V5.4: "all" or ["Mon","Tue",...]
-            // V5.4: the relays of the schedule as sent: one relay its number (3),
-            // several a list ([3, 4])
-            var schedRelays = scheduleRelays(bytes[14]).split(",").map(Number);
-            responceData.relays = schedRelays.length === 1 ? schedRelays[0] : schedRelays;
-            responceData.type = SCHEDULE_TYPES[bytes[15]] || ("type " + bytes[15]); // V5.4: as sent
+            // V5.4: the names of the LX1 codec
+            responceData.index = bytes[4];
+            responceData.startTime = readUint32(bytes, 5);
+            responceData.stopTime = readUint32(bytes, 9);
+            responceData.dayData = bytes[13];
+            responceData.relayStatus = bytes[14];
+            responceData.triggerType = bytes[15];
             responceData.enable = bytes[16];
             if (bytes[15] === 2) {
-                responceData.onTime = durationText(readUint32(bytes, 17)); // V5.4: "10 min"
-                responceData.offTime = durationText(readUint32(bytes, 21));
+                responceData.onTime = readUint32(bytes, 17);
+                responceData.offTime = readUint32(bytes, 21);
             } else if (bytes[15] === 3) {
-                responceData.threshold = readUint32(bytes, 17) | 0;
-                responceData.condition = bytes[21] ? "less than" : "greater than";
-                responceData.input = bytes[22] >= 101 && bytes[22] <= 104 ? "A" + (bytes[22] - 100) : bytes[22];
+                responceData.sensorValue = readUint32(bytes, 17) | 0;
+                responceData.level = bytes[21];
+                responceData.rs485Field = bytes[22];
             }
             responceData.Systimestamp = readTimestamp(bytes);
             break;
@@ -1310,10 +1306,13 @@ function pushHexBytes(bytes, text, count, name) {
 // relay byte: relay 1 alone 0, relay 2 alone 1, relays 1+2 2, any other set a bit mask
 // (bit 0 = relay 1 ... bit 7 = relay 8). The old "relayStatus" number is still accepted.
 function scheduleRelayCode(data) {
-    if (data.relays === undefined) {
-        return requireInt(data.relayStatus, "relays", 0, 255);
+    // V5.4: "relayStatus" (LX1 name): a number as on LX1 (0 relay 1, 1 relay 2, 2 both,
+    // else a relay bit mask), or a list of relay numbers [3,4]; "relays" works too
+    if (data.relays === undefined && !Array.isArray(data.relayStatus)) {
+        return requireInt(data.relayStatus, "relayStatus", 0, 255);
     }
-    var list = Array.isArray(data.relays) ? data.relays : [data.relays];
+    var lv = data.relays !== undefined ? data.relays : data.relayStatus;
+    var list = Array.isArray(lv) ? lv : [lv];
     var mask = 0;
     if (list.length < 1) {
         throw new Error("relays: one relay 1-8, or a list like [3,4]");
@@ -1332,13 +1331,16 @@ function scheduleRelayCode(data) {
 var DAY_NAMES = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 function scheduleDayCode(data) {
-    if (data.days === undefined) {
-        return requireInt(data.dayData, "days", 0, 127);
+    // V5.4: "dayData" (LX1 name): a number as on LX1 (bits, 0 or 127 = every day), or
+    // "all" / day names; "days" works the same
+    var v = data.days !== undefined ? data.days : data.dayData;
+    if (typeof v === "number" || /^\d+$/.test(String(v))) {
+        return requireInt(v, "dayData", 0, 127);
     }
-    if (String(data.days).toLowerCase() === "all") {
+    if (String(v).toLowerCase() === "all") {
         return 0;
     }
-    var list = Array.isArray(data.days) ? data.days : [data.days];
+    var list = Array.isArray(v) ? v : [v];
     var mask = 0;
     if (list.length < 1) {
         throw new Error("days: \"all\" or a list like [\"Mon\",\"Tue\"]");
@@ -1773,13 +1775,24 @@ function pick(a, b) {
 // V5.4: simple names (the old names still work): "count", "register", "coil", "field",
 // "enable", "name", "registerType", "type", "threshold", "input".
 var SIMPLE_NAMES = {"8": {"count": "numberofreg", "coil": "address"}, "9": {"count": "numberofreg", "register": "address"}, "10": {"field": "Field", "enable": "Enable", "name": "parameterName", "registerType": "functionCode", "count": "numberOfParameters", "register": "Registeraddress"}, "13": {"registerType": "functionCode", "count": "numberOfParameters", "register": "Registeraddress"}, "11": {"type": "alarmType", "threshold": "sensorValue", "input": "rs485Field"}};
-var SIMPLE_NAMES_P3 = {"field": {"enable": "Enable", "registerType": "functionCode", "count": "numberOfParameters", "register": "Registeraddress"}, "registers": {"registerType": "functionCode", "register": "Registeraddress"}, "find slaves": {"registerType": "functionCode", "register": "Registeraddress"}, "schedule": {"type": "alarmType", "threshold": "sensorValue", "input": "rs485Field"}};
+var SIMPLE_NAMES_P3 = {
+    // V5.4: the LX1 names on port 3 too (index of a schedule, Field of a Modbus field)
+    "field": { "enable": "Enable", "registerType": "functionCode", "count": "numberOfParameters",
+        "register": "Registeraddress", "Field": "field" },
+    "field name": { "Field": "field" }, "field status": { "Field": "field" }, "field check": { "Field": "field" },
+    "registers": { "registerType": "functionCode", "register": "Registeraddress" },
+    "find slaves": { "registerType": "functionCode", "register": "Registeraddress" },
+    "schedule": { "type": "alarmType", "threshold": "sensorValue", "input": "rs485Field", "index": "slot" },
+    "schedule steps": { "index": "slot" }, "schedule enable": { "index": "slot" },
+    "delete schedule": { "index": "slot" }
+};
 
 function simpleNames(data) {
     var port = Number(data.fPort !== undefined ? data.fPort : data.port);
     var map = SIMPLE_NAMES[String(port)];
     if (port === 3) {
-        var what = String(data.set !== undefined ? data.set : data.read !== undefined ? data.read : "").toLowerCase();
+        var what = String(data.set !== undefined ? data.set : data.read !== undefined ? data.read :
+            data["do"] !== undefined ? data["do"] : "").toLowerCase();
         map = SIMPLE_NAMES_P3[what];
     }
     if (!map) { return data; }
@@ -1877,7 +1890,7 @@ function encodeDownlink(input) {
             if (Array.isArray(data.values)) {
                 coils = data.values;
             } else if (data.numberofreg === undefined || Number(data.numberofreg) === 1) {
-                coils = [data.value];
+                coils = [Number(data.value) === 65280 ? 1 : data.value]; // LX1 sends ON as 65280 (FF00)
             } else {
                 throw new Error("port 8: several coils with values:[1,0,1,...] (one 0/1 per coil)");
             }
@@ -2186,6 +2199,10 @@ function encodeMacSetCommand(data) {
  *     time stamp), the FPort 21 echo as samplingConfig. Encoder FPort 21:
  *     {"fPort":21,"param":0,"count":5,"enable":1,"interval":60}.
  *     AT answers on FPort 3 decode as before.
+ * 52. LX1 names (MacnMan_LoRaWAN_Decoders, MS_L5_CT_X1): "port", index, dayData, relayStatus,
+ *     alarmType, threshold, condition, rs485Field, Field, Enable, functionCode, numberOfParameters,
+ *     Registeraddress, numberofreg, address, param; port 15 index. dayData and relayStatus also
+ *     take "all" / day names and a list of relays. The port 10 and 11 answers use the LX1 names.
  * 51. Delay cyclic as the Maya app: "sequences":[{"sequence":1,"relays":[2],"time":"10 min"},
  *     {"sequence":9,"relays":"none","time":"5 min"}] (9 = the hold, all OFF); "steps" still works.
  * 50. Port 3 "set":"schedule" with type "delay cyclic" takes its "steps" too
