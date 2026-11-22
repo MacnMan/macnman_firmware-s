@@ -1642,7 +1642,7 @@ var P3_READ = {
     }
 };
 var P3_SET = {
-    "name": function (d) { return "AT+NAME=" + p3Text(d.name, "name", 4, 20); },
+    "name": function (d) { return "AT+NAME=" + p3Text(d.name, "name", 4, 22); },
     "heartbeat": function (d) { return "AT+TXTIME=" + p3Secs(d.time, "time", 10, 86400); },
     "uplink format": function (d) { return "AT+PAYFMT=" + p3Word(d.format, "format", "payfmt"); },
     "class": function (d) {
