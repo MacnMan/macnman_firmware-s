@@ -1783,7 +1783,7 @@ var P3_SET = {
     "sampling switch": function (d) { return "AT+SAMPENB=" + p3OnOff(d.enable, "enable"); }
 };
 var P3_DO = {
-    "join again": "AT+JOIN=1", "leave multicast": "AT+MCAST=0", "ping": "AT+UP",
+    "join again": "AT+JOIN=1", "leave multicast": "AT+MCAST=0", "ping": "AT+UP", "restart": "ATZ",
     "delete all schedules": "AT+SCHEDCLR",
     "delete schedule": function (d) { return "AT+ALMDEL=" + requireInt(d.slot, "slot", 0, 9); }
 };
