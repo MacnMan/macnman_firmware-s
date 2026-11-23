@@ -1716,8 +1716,20 @@ var P3_SET = {
         return "AT+RELAY=" + v.join(",");
     },
     "relay": function (d) {
-        return "AT+RELAYSET=" + requireInt(d.relay, "relay", 1, 8) + "," + p3OnOff(d.state, "state") +
+        // V5.4: one relay (3) or several ([1,2] or "1,2"): one AT+RELAYSET each, joined with ";"
+        var list = Array.isArray(d.relay) ? d.relay :
+            (typeof d.relay === "string" && d.relay.indexOf(",") !== -1 ? d.relay.split(",") : [d.relay]);
+        var tail = "," + p3OnOff(d.state, "state") +
             (d.time !== undefined ? "," + p3Secs(d.time, "time", 1, 65535) : "");
+        var out = [], seen = {};
+        for (var i = 0; i < list.length; i++) {
+            var r = requireInt(typeof list[i] === "string" ? list[i].trim() : list[i], "relay", 1, 8);
+            if (seen[r]) { throw new Error("relay: relay " + r + " given twice"); }
+            seen[r] = true;
+            out.push("AT+RELAYSET=" + r + tail);
+        }
+        if (out.length === 0) { throw new Error("relay: 1-8, or a list like [1,2]"); }
+        return out.join(";");
     },
     "motor": function (d) {
         var st = String(d.state).toLowerCase();
