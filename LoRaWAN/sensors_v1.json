@@ -2,11 +2,12 @@
   "MY_L1_TH_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MY-L1-TH-X1",
+    "ModelNumber": "MY-L1-TH-X1",
     "type": "I2C",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-04",
         "binpath": "LoRaWAN/sensors/MY-L1-TH-X1/MY-L1-TH-X1.bin",
         "photopath": "LoRaWAN/sensors/MY-L1-TH-X1/MY-L1-TH-X1.png"
       }
@@ -15,11 +16,12 @@
   "MY_L1_NS_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MY-L1-NS-X1",
+    "ModelNumber": "MY-L1-NS-X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-04",
         "binpath": "LoRaWAN/sensors/MY-L1-NS-X1/MY-L1-NS-X1.bin",
         "photopath": "LoRaWAN/sensors/MY-L1-NS-X1/MY-L1-NS-X1.png"
       }
@@ -28,16 +30,18 @@
   "MacSync_LPS_ToF_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MacSync_LPS_ToF_X1",
+    "ModelNumber": "MacSync_LPS_ToF_X1",
     "type": "I2C",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-08-10",
         "binpath": "LoRaWAN/sensors/MacSync-LPS-ToF/MacSync-LPS-ToF-X1.bin",
         "photopath": "LoRaWAN/sensors/MacSync-LPS-ToF/MacSync-LPS-ToF-X1.png"
       },
       {
         "application": "V1.0.1",
+        "releaseDate": "2026-08-19",
         "binpath": "LoRaWAN/sensors/MacSync-LPS-ToF/custom/MacSync-LPS-ToF-X1-V1.0.1.bin",
         "photopath": "LoRaWAN/sensors/MacSync-LPS-ToF/MacSync-LPS-ToF-X1.png"
       }
@@ -46,11 +50,12 @@
   "MacSync_LBS_ToF_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MacSync_LBS_ToF_X1",
+    "ModelNumber": "MacSync_LBS_ToF_X1",
     "type": "I2C",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-08-07",
         "binpath": "LoRaWAN/sensors/MacSync-LBS-ToF/MacSync-LBS-ToF-X1.bin",
         "photopath": "LoRaWAN/sensors/MacSync-LBS-ToF/MacSync-LBS-ToF-X1.png"
       }
@@ -59,11 +64,12 @@
   "MY_L1_CV_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MY-L1-CV-X1",
-    "type": "RS485",
+    "ModelNumber": "MY-L1-CV-X1",
+    "type": "RS485 & Analog",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-04",
         "binpath": "LoRaWAN/sensors/MY-L1-CV-X1/MY-L1-CV-X1.bin",
         "photopath": "LoRaWAN/sensors/MY-L1-CV-X1/MY-L1-CV-X1.png"
       }
@@ -72,11 +78,12 @@
   "MY_L1_CO2_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MY-L1-CO2-X1",
+    "ModelNumber": "MY-L1-CO2-X1",
     "type": "I2C",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-10-27",
         "binpath": "LoRaWAN/sensors/MY-L1-CO2-X1/MY-L1-CO2-X1.bin",
         "photopath": "LoRaWAN/sensors/MY-L1-CO2-X1/MY-L1-CO2-X1.png"
       }
@@ -85,11 +92,12 @@
   "MY_L1_SPH_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MY-L1-SPH-X1",
+    "ModelNumber": "MY-L1-SPH-X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-04",
         "binpath": "LoRaWAN/sensors/MY-L1-SPH-X1/MY-L1-SPH-X1.bin",
         "photopath": "LoRaWAN/sensors/MY-L1-SPH-X1/MY-L1-SPH-X1.png"
       }
@@ -98,11 +106,12 @@
   "MY_L1_OD_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MY-L1-OD-X1",
+    "ModelNumber": "MY-L1-OD-X1",
     "type": "Analog",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-04",
         "binpath": "LoRaWAN/sensors/MY-L1-OD-X1/MY-L1-OD-X1.bin",
         "photopath": "LoRaWAN/sensors/MY-L1-OD-X1/MY-L1-OD-X1.png"
       }
@@ -111,11 +120,12 @@
   "MY_L1_LPS28_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MY-L1-LPS28-X1",
+    "ModelNumber": "MY-L1-LPS28-X1",
     "type": "I2C",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-04",
         "binpath": "LoRaWAN/sensors/MY-L1-LPS28-X1/MY-L1-LPS28-X1.bin",
         "photopath": "LoRaWAN/sensors/MY-L1-LPS28-X1/MY-L1-LPS28-X1.png"
       }
@@ -124,11 +134,12 @@
   "MY_M1_DRS_X1": {
     "devicetype": "node",
     "protocol": "LoRa",
-    "sensorName": "MY-M1-DRS-X1",
+    "ModelNumber": "MY-M1-DRS-X1",
     "type": "Digital",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-10-28",
         "binpath": "LoRa/MY-M1-DRS-X1/MY-M1-DRS-X1.bin",
         "photopath": "LoRa/MY-M1-DRS-X1/MY-M1-DRS-X1.png"
       }
@@ -137,11 +148,12 @@
   "MY_M1_TH_X1": {
     "devicetype": "node",
     "protocol": "LoRa",
-    "sensorName": "MY-M1-TH-X1",
+    "ModelNumber": "MY-M1-TH-X1",
     "type": "I2C",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-10-28",
         "binpath": "LoRa/MY-M1-TH-X1/MY-M1-TH-X1.bin",
         "photopath": "LoRa/MY-M1-TH-X1/MY-M1-TH-X1.png"
       }
@@ -150,11 +162,12 @@
   "MY_M3_CV_X1": {
     "devicetype": "node",
     "protocol": "LoRa",
-    "sensorName": "MY-M3-CV-X1",
-    "type": "RS485",
+    "ModelNumber": "MY-M3-CV-X1",
+    "type": "RS485 & Analog",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-10-28",
         "binpath": "LoRa/MY-M3-CV-X1/MY-M3-CV-X1.bin",
         "photopath": "LoRa/MY-M3-CV-X1/MY-M3-CV-X1.png"
       }
@@ -163,11 +176,12 @@
   "MY_C2_CV_X1": {
     "devicetype": "node",
     "protocol": "Cellular",
-    "sensorName": "MY-C2-CV-X1",
-    "type": "RS485",
+    "ModelNumber": "MY-C2-CV-X1",
+    "type": "RS485 & Analog",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-18",
         "binpath": "Cellular/MY-C2-CV-X1/MY-C2-CV-X1.bin",
         "photopath": "Cellular/MY-C2-CV-X1/MY-C2-CV-X1.png"
       }
@@ -176,11 +190,12 @@
   "MS_WBSD_TH_X1": {
     "devicetype": "node",
     "protocol": "Wi-Fi",
-    "sensorName": "MS_WBSD_TH_X1",
+    "ModelNumber": "MS_WBSD_TH_X1",
     "type": "I2C",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-10-08",
         "binpath": "Wi-Fi/Sensors/MS-WBSD-TH-X1/MS-WBSD-TH-X1.bin",
         "photopath": "Wi-Fi/Sensors/MS-WBSD-TH-X1/MS-WBSD-TH-X1.png"
       }
@@ -189,11 +204,12 @@
   "MY_W1D_SS7_X1": {
     "devicetype": "datalogger",
     "protocol": "Wi-Fi",
-    "sensorName": "MY-W1D-SS7-X1",
+    "ModelNumber": "MY-W1D-SS7-X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-10-24",
         "binpath": "Wi-Fi/Datalogger/MY-W1D-SS7-X1/MY-W1D-SS7-X1.bin",
         "photopath": "Wi-Fi/Datalogger/MY-W1D-SS7-X1/MY-W1D-SS7-X1.png"
       }
@@ -202,11 +218,12 @@
   "MY_W1D_TH_X1": {
     "devicetype": "datalogger",
     "protocol": "Wi-Fi",
-    "sensorName": "MY-W1D-TH-X1",
+    "ModelNumber": "MY-W1D-TH-X1",
     "type": "I2C",
     "versions": [
       {
         "application": "V1.1",
+        "releaseDate": "2026-11-24",
         "binpath": "Wi-Fi/Datalogger/MY-W1D-TH-X1/MY-W1D-TH-X1.bin",
         "photopath": "Wi-Fi/Datalogger/MY-W1D-TH-X1/MY-W1D-TH-X1.png"
       }
@@ -215,11 +232,12 @@
   "MY_W1D_RTD_X1": {
     "devicetype": "datalogger",
     "protocol": "Wi-Fi",
-    "sensorName": "MY-W1D-RTD-X1",
+    "ModelNumber": "MY-W1D-RTD-X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-24",
         "binpath": "Wi-Fi/Datalogger/MY-W1D-RTD-X1/MY-W1D-RTD-X1.bin",
         "photopath": "Wi-Fi/Datalogger/MY-W1D-RTD-X1/MY-W1D-RTD-X1.png"
       }
@@ -228,11 +246,12 @@
   "MY_W3D_WEC_X1": {
     "devicetype": "datalogger",
     "protocol": "Wi-Fi",
-    "sensorName": "MY-W3D-WEC-X1",
+    "ModelNumber": "MY-W3D-WEC-X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0",
+        "releaseDate": "2026-11-06",
         "binpath": "Wi-Fi/Datalogger/MY-W3D-WEC-X1/MY-W3D-WEC-X1.bin",
         "photopath": "Wi-Fi/Datalogger/MY-W3D-WEC-X1/MY-W3D-WEC-X1.png"
       }
@@ -241,11 +260,12 @@
   "MY_W3D_WPH_X1": {
     "devicetype": "datalogger",
     "protocol": "Wi-Fi",
-    "sensorName": "MY-W3D-WPH-X1",
+    "ModelNumber": "MY-W3D-WPH-X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0",
+        "releaseDate": "2026-11-06",
         "binpath": "Wi-Fi/Datalogger/MY-W3D-WPH-X1/MY-W3D-WPH-X1.bin",
         "photopath": "Wi-Fi/Datalogger/MY-W3D-WPH-X1/MY-W3D-WPH-X1.png"
       }
@@ -254,11 +274,12 @@
   "MY_L3_CV_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MY-L3-CV-X1",
-    "type": "RS485",
+    "ModelNumber": "MY-L3-CV-X1",
+    "type": "RS485 & Analog",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-10-28",
         "binpath": "LoRaWAN/sensors/MY-L3-CV-X1/MY-L3-CV-X1.bin",
         "photopath": "LoRaWAN/sensors/MY-L3-CV-X1/MY-L3-CV-X1.png"
       }
@@ -267,11 +288,12 @@
   "MY_W1_CV_X1": {
     "devicetype": "node",
     "protocol": "Wi-Fi",
-    "sensorName": "MY-W1-CV_X1",
-    "type": "RS485",
+    "ModelNumber": "MY-W1-CV_X1",
+    "type": "RS485 & Analog",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-10-27",
         "binpath": "Wi-Fi/Sensors/MY-W1-CV_X1/MY-W1-CV_X1.bin",
         "photopath": "Wi-Fi/Sensors/MY-W1-CV_X1/MY-W1-CV_X1.png"
       }
@@ -280,11 +302,12 @@
   "MS_L5_CT_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MS-L5-CT-X1",
+    "ModelNumber": "MS-L5-CT-X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-23",
         "binpath": "LoRaWAN/controllers/MS-L5-CT-X1/MS-L5-CT-X1.bin",
         "photopath": "LoRaWAN/controllers/MS-L5-CT-X1/MS-L5-CT-X1.png"
       }
@@ -293,11 +316,12 @@
     "MS-L35-CT-X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MS-L35-CT-X1",
+    "ModelNumber": "MS-L35-CT-X1",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0.2",
+        "releaseDate": "2026-11-23",
         "binpath": "LoRaWAN/controllers/MS-L35-CT-X1/MS-L35-CT-X1-V1.0.2.bin",
         "photopath": "LoRaWAN/controllers/MS-L35-CT-X1/MS-L35-CT-X1.png"
       }
@@ -306,11 +330,12 @@
   "MS-L3-CT-X2": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MS-L3-CT-X2",
+    "ModelNumber": "MS-L3-CT-X2",
     "type": "RS485",
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-24",
         "binpath": "LoRaWAN/controllers/MS-L3-CT-X2/MS-L3-CT-X2-V1.0.0.bin",
         "photopath": "LoRaWAN/controllers/MS-L3-CT-X2/MS-L3-CT-X2.png"
       }
