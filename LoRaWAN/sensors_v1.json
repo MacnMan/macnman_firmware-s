@@ -2,7 +2,7 @@
   "MY_L1_TH_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MY-L1-TH-X1",
+    "ModelNumber": "MY-L1-TH-X1",
     "type": "I2C",
     "versions": [
       {
@@ -15,7 +15,7 @@
   "MY_L1_NS_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MY-L1-NS-X1",
+    "ModelNumber": "MY-L1-NS-X1",
     "type": "RS485",
     "versions": [
       {
@@ -28,7 +28,7 @@
   "MacSync_LPS_ToF_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MacSync_LPS_ToF_X1",
+    "ModelNumber": "MacSync_LPS_ToF_X1",
     "type": "I2C",
     "versions": [
       {
@@ -46,7 +46,7 @@
   "MacSync_LBS_ToF_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MacSync_LBS_ToF_X1",
+    "ModelNumber": "MacSync_LBS_ToF_X1",
     "type": "I2C",
     "versions": [
       {
@@ -59,7 +59,7 @@
   "MY_L1_CV_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MY-L1-CV-X1",
+    "ModelNumber": "MY-L1-CV-X1",
     "type": "RS485",
     "versions": [
       {
@@ -72,7 +72,7 @@
   "MY_L1_CO2_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MY-L1-CO2-X1",
+    "ModelNumber": "MY-L1-CO2-X1",
     "type": "I2C",
     "versions": [
       {
@@ -85,7 +85,7 @@
   "MY_L1_SPH_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MY-L1-SPH-X1",
+    "ModelNumber": "MY-L1-SPH-X1",
     "type": "RS485",
     "versions": [
       {
@@ -98,7 +98,7 @@
   "MY_L1_OD_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MY-L1-OD-X1",
+    "ModelNumber": "MY-L1-OD-X1",
     "type": "Analog",
     "versions": [
       {
@@ -111,7 +111,7 @@
   "MY_L1_LPS28_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MY-L1-LPS28-X1",
+    "ModelNumber": "MY-L1-LPS28-X1",
     "type": "I2C",
     "versions": [
       {
@@ -124,7 +124,7 @@
   "MY_M1_DRS_X1": {
     "devicetype": "node",
     "protocol": "LoRa",
-    "sensorName": "MY-M1-DRS-X1",
+    "ModelNumber": "MY-M1-DRS-X1",
     "type": "Digital",
     "versions": [
       {
@@ -137,7 +137,7 @@
   "MY_M1_TH_X1": {
     "devicetype": "node",
     "protocol": "LoRa",
-    "sensorName": "MY-M1-TH-X1",
+    "ModelNumber": "MY-M1-TH-X1",
     "type": "I2C",
     "versions": [
       {
@@ -150,7 +150,7 @@
   "MY_M3_CV_X1": {
     "devicetype": "node",
     "protocol": "LoRa",
-    "sensorName": "MY-M3-CV-X1",
+    "ModelNumber": "MY-M3-CV-X1",
     "type": "RS485",
     "versions": [
       {
@@ -163,7 +163,7 @@
   "MY_C2_CV_X1": {
     "devicetype": "node",
     "protocol": "Cellular",
-    "sensorName": "MY-C2-CV-X1",
+    "ModelNumber": "MY-C2-CV-X1",
     "type": "RS485",
     "versions": [
       {
@@ -176,7 +176,7 @@
   "MS_WBSD_TH_X1": {
     "devicetype": "node",
     "protocol": "Wi-Fi",
-    "sensorName": "MS_WBSD_TH_X1",
+    "ModelNumber": "MS_WBSD_TH_X1",
     "type": "I2C",
     "versions": [
       {
@@ -189,7 +189,7 @@
   "MY_W1D_SS7_X1": {
     "devicetype": "datalogger",
     "protocol": "Wi-Fi",
-    "sensorName": "MY-W1D-SS7-X1",
+    "ModelNumber": "MY-W1D-SS7-X1",
     "type": "RS485",
     "versions": [
       {
@@ -202,7 +202,7 @@
   "MY_W1D_TH_X1": {
     "devicetype": "datalogger",
     "protocol": "Wi-Fi",
-    "sensorName": "MY-W1D-TH-X1",
+    "ModelNumber": "MY-W1D-TH-X1",
     "type": "I2C",
     "versions": [
       {
@@ -215,7 +215,7 @@
   "MY_W1D_RTD_X1": {
     "devicetype": "datalogger",
     "protocol": "Wi-Fi",
-    "sensorName": "MY-W1D-RTD-X1",
+    "ModelNumber": "MY-W1D-RTD-X1",
     "type": "RS485",
     "versions": [
       {
@@ -228,7 +228,7 @@
   "MY_W3D_WEC_X1": {
     "devicetype": "datalogger",
     "protocol": "Wi-Fi",
-    "sensorName": "MY-W3D-WEC-X1",
+    "ModelNumber": "MY-W3D-WEC-X1",
     "type": "RS485",
     "versions": [
       {
@@ -241,7 +241,7 @@
   "MY_W3D_WPH_X1": {
     "devicetype": "datalogger",
     "protocol": "Wi-Fi",
-    "sensorName": "MY-W3D-WPH-X1",
+    "ModelNumber": "MY-W3D-WPH-X1",
     "type": "RS485",
     "versions": [
       {
@@ -254,7 +254,7 @@
   "MY_L3_CV_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MY-L3-CV-X1",
+    "ModelNumber": "MY-L3-CV-X1",
     "type": "RS485",
     "versions": [
       {
@@ -267,7 +267,7 @@
   "MY_W1_CV_X1": {
     "devicetype": "node",
     "protocol": "Wi-Fi",
-    "sensorName": "MY-W1-CV_X1",
+    "ModelNumber": "MY-W1-CV_X1",
     "type": "RS485",
     "versions": [
       {
@@ -280,7 +280,7 @@
   "MS_L5_CT_X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MS-L5-CT-X1",
+    "ModelNumber": "MS-L5-CT-X1",
     "type": "RS485",
     "versions": [
       {
@@ -293,7 +293,7 @@
     "MS-L35-CT-X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MS-L35-CT-X1",
+    "ModelNumber": "MS-L35-CT-X1",
     "type": "RS485",
     "versions": [
       {
@@ -306,7 +306,7 @@
   "MS-L3-CT-X2": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
-    "sensorName": "MS-L3-CT-X2",
+    "ModelNumber": "MS-L3-CT-X2",
     "type": "RS485",
     "versions": [
       {
