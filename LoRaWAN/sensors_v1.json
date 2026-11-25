@@ -60,7 +60,7 @@
     "devicetype": "node",
     "protocol": "LoRaWAN",
     "ModelNumber": "MY-L1-CV-X1",
-    "type": "RS485",
+    "type": "RS485 & Analog",
     "versions": [
       {
         "application": "V1.0.0",
@@ -151,7 +151,7 @@
     "devicetype": "node",
     "protocol": "LoRa",
     "ModelNumber": "MY-M3-CV-X1",
-    "type": "RS485",
+    "type": "RS485 & Analog",
     "versions": [
       {
         "application": "V1.0.0",
@@ -164,7 +164,7 @@
     "devicetype": "node",
     "protocol": "Cellular",
     "ModelNumber": "MY-C2-CV-X1",
-    "type": "RS485",
+    "type": "RS485 & Analog",
     "versions": [
       {
         "application": "V1.0.0",
@@ -255,7 +255,7 @@
     "devicetype": "node",
     "protocol": "LoRaWAN",
     "ModelNumber": "MY-L3-CV-X1",
-    "type": "RS485",
+    "type": "RS485 & Analog",
     "versions": [
       {
         "application": "V1.0.0",
@@ -268,7 +268,7 @@
     "devicetype": "node",
     "protocol": "Wi-Fi",
     "ModelNumber": "MY-W1-CV_X1",
-    "type": "RS485",
+    "type": "RS485 & Analog",
     "versions": [
       {
         "application": "V1.0.0",
