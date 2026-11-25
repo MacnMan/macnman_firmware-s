@@ -7,6 +7,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-04",
         "binpath": "LoRaWAN/sensors/MY-L1-TH-X1/MY-L1-TH-X1.bin",
         "photopath": "LoRaWAN/sensors/MY-L1-TH-X1/MY-L1-TH-X1.png"
       }
@@ -20,6 +21,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-04",
         "binpath": "LoRaWAN/sensors/MY-L1-NS-X1/MY-L1-NS-X1.bin",
         "photopath": "LoRaWAN/sensors/MY-L1-NS-X1/MY-L1-NS-X1.png"
       }
@@ -33,11 +35,13 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-08-10",
         "binpath": "LoRaWAN/sensors/MacSync-LPS-ToF/MacSync-LPS-ToF-X1.bin",
         "photopath": "LoRaWAN/sensors/MacSync-LPS-ToF/MacSync-LPS-ToF-X1.png"
       },
       {
         "application": "V1.0.1",
+        "releaseDate": "2026-08-19",
         "binpath": "LoRaWAN/sensors/MacSync-LPS-ToF/custom/MacSync-LPS-ToF-X1-V1.0.1.bin",
         "photopath": "LoRaWAN/sensors/MacSync-LPS-ToF/MacSync-LPS-ToF-X1.png"
       }
@@ -51,6 +55,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-08-07",
         "binpath": "LoRaWAN/sensors/MacSync-LBS-ToF/MacSync-LBS-ToF-X1.bin",
         "photopath": "LoRaWAN/sensors/MacSync-LBS-ToF/MacSync-LBS-ToF-X1.png"
       }
@@ -64,6 +69,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-04",
         "binpath": "LoRaWAN/sensors/MY-L1-CV-X1/MY-L1-CV-X1.bin",
         "photopath": "LoRaWAN/sensors/MY-L1-CV-X1/MY-L1-CV-X1.png"
       }
@@ -77,6 +83,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-10-27",
         "binpath": "LoRaWAN/sensors/MY-L1-CO2-X1/MY-L1-CO2-X1.bin",
         "photopath": "LoRaWAN/sensors/MY-L1-CO2-X1/MY-L1-CO2-X1.png"
       }
@@ -90,6 +97,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-04",
         "binpath": "LoRaWAN/sensors/MY-L1-SPH-X1/MY-L1-SPH-X1.bin",
         "photopath": "LoRaWAN/sensors/MY-L1-SPH-X1/MY-L1-SPH-X1.png"
       }
@@ -103,6 +111,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-04",
         "binpath": "LoRaWAN/sensors/MY-L1-OD-X1/MY-L1-OD-X1.bin",
         "photopath": "LoRaWAN/sensors/MY-L1-OD-X1/MY-L1-OD-X1.png"
       }
@@ -116,6 +125,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-04",
         "binpath": "LoRaWAN/sensors/MY-L1-LPS28-X1/MY-L1-LPS28-X1.bin",
         "photopath": "LoRaWAN/sensors/MY-L1-LPS28-X1/MY-L1-LPS28-X1.png"
       }
@@ -129,6 +139,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-10-28",
         "binpath": "LoRa/MY-M1-DRS-X1/MY-M1-DRS-X1.bin",
         "photopath": "LoRa/MY-M1-DRS-X1/MY-M1-DRS-X1.png"
       }
@@ -142,6 +153,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-10-28",
         "binpath": "LoRa/MY-M1-TH-X1/MY-M1-TH-X1.bin",
         "photopath": "LoRa/MY-M1-TH-X1/MY-M1-TH-X1.png"
       }
@@ -155,6 +167,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-10-28",
         "binpath": "LoRa/MY-M3-CV-X1/MY-M3-CV-X1.bin",
         "photopath": "LoRa/MY-M3-CV-X1/MY-M3-CV-X1.png"
       }
@@ -168,6 +181,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-18",
         "binpath": "Cellular/MY-C2-CV-X1/MY-C2-CV-X1.bin",
         "photopath": "Cellular/MY-C2-CV-X1/MY-C2-CV-X1.png"
       }
@@ -181,6 +195,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-10-08",
         "binpath": "Wi-Fi/Sensors/MS-WBSD-TH-X1/MS-WBSD-TH-X1.bin",
         "photopath": "Wi-Fi/Sensors/MS-WBSD-TH-X1/MS-WBSD-TH-X1.png"
       }
@@ -194,6 +209,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-10-24",
         "binpath": "Wi-Fi/Datalogger/MY-W1D-SS7-X1/MY-W1D-SS7-X1.bin",
         "photopath": "Wi-Fi/Datalogger/MY-W1D-SS7-X1/MY-W1D-SS7-X1.png"
       }
@@ -207,6 +223,7 @@
     "versions": [
       {
         "application": "V1.1",
+        "releaseDate": "2026-11-24",
         "binpath": "Wi-Fi/Datalogger/MY-W1D-TH-X1/MY-W1D-TH-X1.bin",
         "photopath": "Wi-Fi/Datalogger/MY-W1D-TH-X1/MY-W1D-TH-X1.png"
       }
@@ -220,6 +237,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-24",
         "binpath": "Wi-Fi/Datalogger/MY-W1D-RTD-X1/MY-W1D-RTD-X1.bin",
         "photopath": "Wi-Fi/Datalogger/MY-W1D-RTD-X1/MY-W1D-RTD-X1.png"
       }
@@ -233,6 +251,7 @@
     "versions": [
       {
         "application": "V1.0",
+        "releaseDate": "2026-11-06",
         "binpath": "Wi-Fi/Datalogger/MY-W3D-WEC-X1/MY-W3D-WEC-X1.bin",
         "photopath": "Wi-Fi/Datalogger/MY-W3D-WEC-X1/MY-W3D-WEC-X1.png"
       }
@@ -246,6 +265,7 @@
     "versions": [
       {
         "application": "V1.0",
+        "releaseDate": "2026-11-06",
         "binpath": "Wi-Fi/Datalogger/MY-W3D-WPH-X1/MY-W3D-WPH-X1.bin",
         "photopath": "Wi-Fi/Datalogger/MY-W3D-WPH-X1/MY-W3D-WPH-X1.png"
       }
@@ -259,6 +279,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-10-28",
         "binpath": "LoRaWAN/sensors/MY-L3-CV-X1/MY-L3-CV-X1.bin",
         "photopath": "LoRaWAN/sensors/MY-L3-CV-X1/MY-L3-CV-X1.png"
       }
@@ -272,6 +293,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-10-27",
         "binpath": "Wi-Fi/Sensors/MY-W1-CV_X1/MY-W1-CV_X1.bin",
         "photopath": "Wi-Fi/Sensors/MY-W1-CV_X1/MY-W1-CV_X1.png"
       }
@@ -285,6 +307,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-23",
         "binpath": "LoRaWAN/controllers/MS-L5-CT-X1/MS-L5-CT-X1.bin",
         "photopath": "LoRaWAN/controllers/MS-L5-CT-X1/MS-L5-CT-X1.png"
       }
@@ -298,6 +321,7 @@
     "versions": [
       {
         "application": "V1.0.2",
+        "releaseDate": "2026-11-23",
         "binpath": "LoRaWAN/controllers/MS-L35-CT-X1/MS-L35-CT-X1-V1.0.2.bin",
         "photopath": "LoRaWAN/controllers/MS-L35-CT-X1/MS-L35-CT-X1.png"
       }
@@ -311,6 +335,7 @@
     "versions": [
       {
         "application": "V1.0.0",
+        "releaseDate": "2026-11-24",
         "binpath": "LoRaWAN/controllers/MS-L3-CT-X2/MS-L3-CT-X2-V1.0.0.bin",
         "photopath": "LoRaWAN/controllers/MS-L3-CT-X2/MS-L3-CT-X2.png"
       }
