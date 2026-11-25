@@ -184,6 +184,26 @@
         "releaseDate": "2026-11-18",
         "binpath": "Cellular/MY-C2-CV-X1/MY-C2-CV-X1.bin",
         "photopath": "Cellular/MY-C2-CV-X1/MY-C2-CV-X1.png"
+      },
+      {
+        "application": "V1.0.1",
+        "releaseDate": "2026-11-25",
+        "binpath": "Cellular/MY-C2-CV-X1/MY-C2-CV-X1-V1.0.1.bin",
+        "photopath": "Cellular/MY-C2-CV-X1/MY-C2-CV-X1.png"
+      }
+    ]
+  },
+  "MY_C2_SD_X1": {
+    "devicetype": "node",
+    "protocol": "Cellular",
+    "ModelNumber": "MY-C2-SD-X1",
+    "type": "Digital",
+    "versions": [
+      {
+        "application": "V1.0.0",
+        "releaseDate": "2026-11-21",
+        "binpath": "Cellular/MY-C2-SD-X1/MY-C2-SD-X1.bin",
+        "photopath": "Cellular/MY-C2-SD-X1/MY-C2-SD-X1.png"
       }
     ]
   },
