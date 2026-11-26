@@ -4,6 +4,7 @@
     "protocol": "LoRaWAN",
     "ModelNumber": "MY-L1-TH-X1",
     "type": "I2C",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -18,6 +19,7 @@
     "protocol": "LoRaWAN",
     "ModelNumber": "MY-L1-NS-X1",
     "type": "RS485",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -32,6 +34,7 @@
     "protocol": "LoRaWAN",
     "ModelNumber": "MacSync_LPS_ToF_X1",
     "type": "I2C",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -52,6 +55,7 @@
     "protocol": "LoRaWAN",
     "ModelNumber": "MacSync_LBS_ToF_X1",
     "type": "I2C",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -66,6 +70,7 @@
     "protocol": "LoRaWAN",
     "ModelNumber": "MY-L1-CV-X1",
     "type": "RS485 & Analog",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -80,6 +85,7 @@
     "protocol": "LoRaWAN",
     "ModelNumber": "MY-L1-CO2-X1",
     "type": "I2C",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -94,6 +100,7 @@
     "protocol": "LoRaWAN",
     "ModelNumber": "MY-L1-SPH-X1",
     "type": "RS485",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -108,6 +115,7 @@
     "protocol": "LoRaWAN",
     "ModelNumber": "MY-L1-OD-X1",
     "type": "Analog",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -122,6 +130,7 @@
     "protocol": "LoRaWAN",
     "ModelNumber": "MY-L1-LPS28-X1",
     "type": "I2C",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -136,6 +145,7 @@
     "protocol": "LoRa",
     "ModelNumber": "MY-M1-DRS-X1",
     "type": "Digital",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -150,6 +160,7 @@
     "protocol": "LoRa",
     "ModelNumber": "MY-M1-TH-X1",
     "type": "I2C",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -164,6 +175,7 @@
     "protocol": "LoRa",
     "ModelNumber": "MY-M3-CV-X1",
     "type": "RS485 & Analog",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -178,6 +190,7 @@
     "protocol": "Cellular",
     "ModelNumber": "MY-C2-CV-X1",
     "type": "RS485 & Analog",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -198,6 +211,7 @@
     "protocol": "Cellular",
     "ModelNumber": "MY-C2-SD-X1",
     "type": "Digital",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -212,6 +226,7 @@
     "protocol": "Wi-Fi",
     "ModelNumber": "MS_WBSD_TH_X1",
     "type": "I2C",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -226,6 +241,7 @@
     "protocol": "Wi-Fi",
     "ModelNumber": "MY-W1D-SS7-X1",
     "type": "RS485",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -240,6 +256,7 @@
     "protocol": "Wi-Fi",
     "ModelNumber": "MY-W1D-TH-X1",
     "type": "I2C",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.1",
@@ -254,6 +271,7 @@
     "protocol": "Wi-Fi",
     "ModelNumber": "MY-W1D-RTD-X1",
     "type": "RS485",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -268,6 +286,7 @@
     "protocol": "Wi-Fi",
     "ModelNumber": "MY-W3D-WEC-X1",
     "type": "RS485",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0",
@@ -282,6 +301,7 @@
     "protocol": "Wi-Fi",
     "ModelNumber": "MY-W3D-WPH-X1",
     "type": "RS485",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0",
@@ -296,6 +316,7 @@
     "protocol": "LoRaWAN",
     "ModelNumber": "MY-L3-CV-X1",
     "type": "RS485 & Analog",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -310,6 +331,7 @@
     "protocol": "Wi-Fi",
     "ModelNumber": "MY-W1-CV_X1",
     "type": "RS485 & Analog",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -324,6 +346,7 @@
     "protocol": "LoRaWAN",
     "ModelNumber": "MS-L5-CT-X1",
     "type": "RS485",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
@@ -333,11 +356,12 @@
       }
     ]
   },
-    "MS-L35-CT-X1": {
+  "MS-L35-CT-X1": {
     "devicetype": "node",
     "protocol": "LoRaWAN",
     "ModelNumber": "MS-L35-CT-X1",
     "type": "RS485",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.2",
@@ -352,6 +376,7 @@
     "protocol": "LoRaWAN",
     "ModelNumber": "MS-L3-CT-X2",
     "type": "RS485",
+    "installOn": [],
     "versions": [
       {
         "application": "V1.0.0",
