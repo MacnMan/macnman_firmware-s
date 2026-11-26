@@ -190,7 +190,7 @@
     "protocol": "Cellular",
     "ModelNumber": "MY-C2-CV-X1",
     "type": "RS485 & Analog",
-    "switchTo": ["MY-C2-SD-X1"],
+    "switchTo": [],
     "versions": [
       {
         "application": "V1.0.0",
