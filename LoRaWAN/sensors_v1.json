@@ -197,12 +197,6 @@
         "releaseDate": "2026-11-18",
         "binpath": "Cellular/MY-C2-CV-X1/MY-C2-CV-X1.bin",
         "photopath": "Cellular/MY-C2-CV-X1/MY-C2-CV-X1.png"
-      },
-      {
-        "application": "V1.0.1",
-        "releaseDate": "2026-11-25",
-        "binpath": "Cellular/MY-C2-CV-X1/MY-C2-CV-X1-V1.0.1.bin",
-        "photopath": "Cellular/MY-C2-CV-X1/MY-C2-CV-X1.png"
       }
     ]
   },
