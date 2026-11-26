@@ -374,7 +374,7 @@
     "versions": [
       {
         "application": "V1.0.0",
-        "releaseDate": "2026-11-24",
+        "releaseDate": "2026-11-26",
         "binpath": "LoRaWAN/controllers/MS-L3-CT-X2/MS-L3-CT-X2-V1.0.0.bin",
         "photopath": "LoRaWAN/controllers/MS-L3-CT-X2/MS-L3-CT-X2.png"
       }
