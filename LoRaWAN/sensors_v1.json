@@ -190,7 +190,7 @@
     "protocol": "Cellular",
     "ModelNumber": "MY-C2-CV-X1",
     "type": "RS485 & Analog",
-    "installOn": [],
+    "installOn": [MY_L1_NS_X1],
     "versions": [
       {
         "application": "V1.0.0",
