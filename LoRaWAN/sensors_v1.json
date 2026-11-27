@@ -359,7 +359,7 @@
     "versions": [
       {
         "application": "V1.0.2",
-        "releaseDate": "2026-11-26",
+        "releaseDate": "2026-11-27",
         "binpath": "LoRaWAN/controllers/MS-L35-CT-X1/MS-L35-CT-X1-V1.0.2.bin",
         "photopath": "LoRaWAN/controllers/MS-L35-CT-X1/MS-L35-CT-X1.png"
       }
